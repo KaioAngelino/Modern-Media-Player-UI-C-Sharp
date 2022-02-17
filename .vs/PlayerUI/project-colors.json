@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b265b459-b4b6-44bc-bdb1-b401c58dc48f": {
+      "ProjectGuid": "b265b459-b4b6-44bc-bdb1-b401c58dc48f",
+      "DisplayName": "PlayerUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

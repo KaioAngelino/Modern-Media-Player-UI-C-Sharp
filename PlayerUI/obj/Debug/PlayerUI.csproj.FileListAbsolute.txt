@@ -12,3 +12,29 @@ G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.pdb
 D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\bin\Debug\PlayerUI.exe.config
 D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\obj\Debug\PlayerUI.exe
 D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\obj\Debug\PlayerUI.pdb
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\PlayerUI.exe.config
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\PlayerUI.exe
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\PlayerUI.pdb
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.csproj.AssemblyReference.cache
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.Form1.resources
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.Form2.resources
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.Form3.resources
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.csproj.GenerateResource.cache
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.csproj.CoreCompileInputs.cache
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.exe
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.pdb
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.dll
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.pdb
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.xml
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.csproj.CopyComplete
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\obj\Debug\PlayerUI.Form4.resources
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\kaioa\Source\Repos\ProjetoQuiz\PlayerUI\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\kaioa\source\repos\ProjetoQuiz\PlayerUI\bin\Debug\Microsoft.Azure.Amqp.dll
+C:\Users\kaioa\source\repos\ProjetoQuiz\PlayerUI\bin\Debug\Ninject.dll
+C:\Users\kaioa\source\repos\ProjetoQuiz\PlayerUI\bin\Debug\Ninject.xml

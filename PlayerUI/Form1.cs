@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,9 +123,7 @@ namespace PlayerUI
         #region ToolsSubMenu
         private void button13_Click(object sender, EventArgs e)
         {
-            //..
-            //your codes
-            //..
+            openChildForm(new Form4());
             hideSubMenu();
         }
 
@@ -186,6 +185,20 @@ namespace PlayerUI
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btn_Iniciar(object sender, EventArgs e)
+        {
+            openChildForm(new Form2());
+            //..
+            //your codes
+            //..
+            hideSubMenu();
+        }
+
+        private void btnParticipantes_Click(object sender, EventArgs e)
+        {
+            int numeroParticipantes = Convert.ToInt32(Interaction.InputBox("Quantos Participantes?", "Número de Participantes", "1"));
         }
     }
 }

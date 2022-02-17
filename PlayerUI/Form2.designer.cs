@@ -28,38 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelPergunta = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnMenosDuas = new System.Windows.Forms.Button();
+            this.btnVerNaBilbia = new System.Windows.Forms.Button();
+            this.btnResposta = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.groupBoxAlternativas = new System.Windows.Forms.GroupBox();
+            this.labelRespostaERRADA = new System.Windows.Forms.Label();
+            this.labelRespostaCERTA = new System.Windows.Forms.Label();
+            this.radioAlternativaD = new System.Windows.Forms.RadioButton();
+            this.radioAlternativaC = new System.Windows.Forms.RadioButton();
+            this.radioAlternativaB = new System.Windows.Forms.RadioButton();
+            this.radioAlternativaA = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxVejaBiblia = new System.Windows.Forms.GroupBox();
+            this.txtVejaNaBiblia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxAlternativas.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBoxVejaBiblia.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelPergunta
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(258, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FORMULARIO X1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(54, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(604, 26);
-            this.textBox1.TabIndex = 1;
+            this.labelPergunta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelPergunta.AutoSize = true;
+            this.labelPergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPergunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelPergunta.Location = new System.Drawing.Point(331, 9);
+            this.labelPergunta.Name = "labelPergunta";
+            this.labelPergunta.Size = new System.Drawing.Size(173, 25);
+            this.labelPergunta.TabIndex = 0;
+            this.labelPergunta.Text = "FORMULARIO X1";
             // 
             // dataGridView1
             // 
@@ -70,68 +72,72 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(54, 99);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(434, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(984, 396);
             this.dataGridView1.TabIndex = 2;
             // 
-            // button1
+            // btnConfirmar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(508, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnConfirmar.Location = new System.Drawing.Point(14, 245);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(150, 40);
+            this.btnConfirmar.TabIndex = 3;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // button2
+            // btnMenosDuas
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(508, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMenosDuas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenosDuas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnMenosDuas.FlatAppearance.BorderSize = 0;
+            this.btnMenosDuas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenosDuas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenosDuas.ForeColor = System.Drawing.Color.LightGray;
+            this.btnMenosDuas.Location = new System.Drawing.Point(14, 34);
+            this.btnMenosDuas.Name = "btnMenosDuas";
+            this.btnMenosDuas.Size = new System.Drawing.Size(150, 40);
+            this.btnMenosDuas.TabIndex = 4;
+            this.btnMenosDuas.Text = "- 2";
+            this.btnMenosDuas.UseVisualStyleBackColor = false;
+            this.btnMenosDuas.Click += new System.EventHandler(this.btnMenosDuas_Click);
             // 
-            // button3
+            // btnVerNaBilbia
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(508, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnVerNaBilbia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerNaBilbia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnVerNaBilbia.FlatAppearance.BorderSize = 0;
+            this.btnVerNaBilbia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerNaBilbia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerNaBilbia.ForeColor = System.Drawing.Color.LightGray;
+            this.btnVerNaBilbia.Location = new System.Drawing.Point(14, 101);
+            this.btnVerNaBilbia.Name = "btnVerNaBilbia";
+            this.btnVerNaBilbia.Size = new System.Drawing.Size(150, 40);
+            this.btnVerNaBilbia.TabIndex = 5;
+            this.btnVerNaBilbia.Text = "VER NA BÍBLIA";
+            this.btnVerNaBilbia.UseVisualStyleBackColor = false;
+            this.btnVerNaBilbia.Click += new System.EventHandler(this.btnVerNaBilbia_Click);
             // 
-            // button4
+            // btnResposta
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(508, 99);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 40);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnResposta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResposta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnResposta.FlatAppearance.BorderSize = 0;
+            this.btnResposta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResposta.ForeColor = System.Drawing.Color.LightGray;
+            this.btnResposta.Location = new System.Drawing.Point(14, 171);
+            this.btnResposta.Name = "btnResposta";
+            this.btnResposta.Size = new System.Drawing.Size(150, 40);
+            this.btnResposta.TabIndex = 6;
+            this.btnResposta.Text = "RESPOSTA";
+            this.btnResposta.UseVisualStyleBackColor = false;
+            this.btnResposta.Click += new System.EventHandler(this.btnResposta_Click);
             // 
             // button5
             // 
@@ -146,25 +152,150 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // groupBoxAlternativas
+            // 
+            this.groupBoxAlternativas.Controls.Add(this.groupBoxVejaBiblia);
+            this.groupBoxAlternativas.Controls.Add(this.labelRespostaERRADA);
+            this.groupBoxAlternativas.Controls.Add(this.labelRespostaCERTA);
+            this.groupBoxAlternativas.Controls.Add(this.radioAlternativaD);
+            this.groupBoxAlternativas.Controls.Add(this.radioAlternativaC);
+            this.groupBoxAlternativas.Controls.Add(this.radioAlternativaB);
+            this.groupBoxAlternativas.Controls.Add(this.radioAlternativaA);
+            this.groupBoxAlternativas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAlternativas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.groupBoxAlternativas.Location = new System.Drawing.Point(54, 99);
+            this.groupBoxAlternativas.Name = "groupBoxAlternativas";
+            this.groupBoxAlternativas.Size = new System.Drawing.Size(434, 396);
+            this.groupBoxAlternativas.TabIndex = 8;
+            this.groupBoxAlternativas.TabStop = false;
+            this.groupBoxAlternativas.Text = "ALTERNATIVAS";
+            // 
+            // labelRespostaERRADA
+            // 
+            this.labelRespostaERRADA.AutoSize = true;
+            this.labelRespostaERRADA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRespostaERRADA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.labelRespostaERRADA.Location = new System.Drawing.Point(326, 216);
+            this.labelRespostaERRADA.Name = "labelRespostaERRADA";
+            this.labelRespostaERRADA.Size = new System.Drawing.Size(85, 20);
+            this.labelRespostaERRADA.TabIndex = 5;
+            this.labelRespostaERRADA.Text = "ERRADO";
+            this.labelRespostaERRADA.Visible = false;
+            // 
+            // labelRespostaCERTA
+            // 
+            this.labelRespostaCERTA.AutoSize = true;
+            this.labelRespostaCERTA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRespostaCERTA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(235)))), ((int)(((byte)(42)))));
+            this.labelRespostaCERTA.Location = new System.Drawing.Point(342, 216);
+            this.labelRespostaCERTA.Name = "labelRespostaCERTA";
+            this.labelRespostaCERTA.Size = new System.Drawing.Size(69, 20);
+            this.labelRespostaCERTA.TabIndex = 4;
+            this.labelRespostaCERTA.Text = "CERTO";
+            this.labelRespostaCERTA.Visible = false;
+            // 
+            // radioAlternativaD
+            // 
+            this.radioAlternativaD.AutoSize = true;
+            this.radioAlternativaD.Location = new System.Drawing.Point(7, 219);
+            this.radioAlternativaD.Name = "radioAlternativaD";
+            this.radioAlternativaD.Size = new System.Drawing.Size(97, 17);
+            this.radioAlternativaD.TabIndex = 3;
+            this.radioAlternativaD.TabStop = true;
+            this.radioAlternativaD.Text = "radioButton4";
+            this.radioAlternativaD.UseVisualStyleBackColor = true;
+            // 
+            // radioAlternativaC
+            // 
+            this.radioAlternativaC.AutoSize = true;
+            this.radioAlternativaC.Location = new System.Drawing.Point(7, 160);
+            this.radioAlternativaC.Name = "radioAlternativaC";
+            this.radioAlternativaC.Size = new System.Drawing.Size(97, 17);
+            this.radioAlternativaC.TabIndex = 2;
+            this.radioAlternativaC.TabStop = true;
+            this.radioAlternativaC.Text = "radioButton3";
+            this.radioAlternativaC.UseVisualStyleBackColor = true;
+            // 
+            // radioAlternativaB
+            // 
+            this.radioAlternativaB.AutoSize = true;
+            this.radioAlternativaB.Location = new System.Drawing.Point(7, 101);
+            this.radioAlternativaB.Name = "radioAlternativaB";
+            this.radioAlternativaB.Size = new System.Drawing.Size(97, 17);
+            this.radioAlternativaB.TabIndex = 1;
+            this.radioAlternativaB.TabStop = true;
+            this.radioAlternativaB.Text = "radioButton2";
+            this.radioAlternativaB.UseVisualStyleBackColor = true;
+            // 
+            // radioAlternativaA
+            // 
+            this.radioAlternativaA.AutoSize = true;
+            this.radioAlternativaA.Location = new System.Drawing.Point(7, 46);
+            this.radioAlternativaA.Name = "radioAlternativaA";
+            this.radioAlternativaA.Size = new System.Drawing.Size(97, 17);
+            this.radioAlternativaA.TabIndex = 0;
+            this.radioAlternativaA.TabStop = true;
+            this.radioAlternativaA.Text = "radioButton1";
+            this.radioAlternativaA.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnMenosDuas);
+            this.groupBox1.Controls.Add(this.btnVerNaBilbia);
+            this.groupBox1.Controls.Add(this.btnResposta);
+            this.groupBox1.Controls.Add(this.btnConfirmar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.groupBox1.Location = new System.Drawing.Point(494, 99);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(178, 300);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "AJUDAS";
+            // 
+            // groupBoxVejaBiblia
+            // 
+            this.groupBoxVejaBiblia.Controls.Add(this.txtVejaNaBiblia);
+            this.groupBoxVejaBiblia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.groupBoxVejaBiblia.Location = new System.Drawing.Point(6, 285);
+            this.groupBoxVejaBiblia.Name = "groupBoxVejaBiblia";
+            this.groupBoxVejaBiblia.Size = new System.Drawing.Size(405, 100);
+            this.groupBoxVejaBiblia.TabIndex = 6;
+            this.groupBoxVejaBiblia.TabStop = false;
+            this.groupBoxVejaBiblia.Text = "Veja Na Bíblia";
+            this.groupBoxVejaBiblia.Visible = false;
+            // 
+            // txtVejaNaBiblia
+            // 
+            this.txtVejaNaBiblia.AutoSize = true;
+            this.txtVejaNaBiblia.ForeColor = System.Drawing.Color.White;
+            this.txtVejaNaBiblia.Location = new System.Drawing.Point(7, 33);
+            this.txtVejaNaBiblia.Name = "txtVejaNaBiblia";
+            this.txtVejaNaBiblia.Size = new System.Drawing.Size(41, 13);
+            this.txtVejaNaBiblia.TabIndex = 0;
+            this.txtVejaNaBiblia.Text = "label1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(684, 431);
+            this.ClientSize = new System.Drawing.Size(1234, 530);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxAlternativas);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelPergunta);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxAlternativas.ResumeLayout(false);
+            this.groupBoxAlternativas.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBoxVejaBiblia.ResumeLayout(false);
+            this.groupBoxVejaBiblia.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,13 +303,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelPergunta;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnMenosDuas;
+        private System.Windows.Forms.Button btnVerNaBilbia;
+        private System.Windows.Forms.Button btnResposta;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBoxAlternativas;
+        private System.Windows.Forms.RadioButton radioAlternativaD;
+        private System.Windows.Forms.RadioButton radioAlternativaC;
+        private System.Windows.Forms.RadioButton radioAlternativaB;
+        private System.Windows.Forms.RadioButton radioAlternativaA;
+        private System.Windows.Forms.Label labelRespostaCERTA;
+        private System.Windows.Forms.Label labelRespostaERRADA;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxVejaBiblia;
+        private System.Windows.Forms.Label txtVejaNaBiblia;
     }
 }
