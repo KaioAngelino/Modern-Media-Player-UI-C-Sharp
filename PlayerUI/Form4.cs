@@ -11,13 +11,20 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace PlayerUI
 {
     public partial class Form4 : Form
     {
-        int totalPerguntas = 0;
+        private OleDbConnection _olecon;
+        private OleDbConnection _olecon2;
+        private OleDbCommand _oleCmd;
+        private OleDbCommand _oleCmd2;
+        private static String _Arquivo = @"C:\File\QUIZ.xlsx";
+        private String _StringConexao = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 12.0 Xml;HDR=YES;ReadOnly=False';", _Arquivo);
+        private String _Consulta;
 
         public Form4()
         {
@@ -27,24 +34,95 @@ namespace PlayerUI
 
         private void btnCriarPergunta_Click(object sender, EventArgs e)
         {
-            FileStream fStream = File.Open(@"C:\File\Quiz.xlsx", FileMode.Open, FileAccess.Read);
-            IExcelDataReader excelDataReader = ExcelReaderFactory.CreateOpenXmlReader(fStream);
-            DataSet resultDataSet = excelDataReader.AsDataSet();
-            excelDataReader.Close();
+            try
+            {
+                _olecon = new OleDbConnection(_StringConexao);
+                _olecon.Open();
 
-            totalPerguntas = resultDataSet.Tables[0].Rows.Count;
+                _oleCmd = new OleDbCommand();
+                _oleCmd.Connection = _olecon;
+                _oleCmd.CommandType = CommandType.Text;
 
-            DataRow dr = resultDataSet.Tables[0].NewRow();
-            dr[0] = txtPergunta.Text.ToUpper();
-            resultDataSet.Tables[0].Rows.Add(dr);
-            /*resultDataSet.Tables[0].Rows[totalPerguntas][1] = txtA.Text.ToUpper();// = Alternativa A
-            resultDataSet.Tables[0].Rows[totalPerguntas][2] = txtB.Text.ToUpper();// = Alternativa B
-            resultDataSet.Tables[0].Rows[totalPerguntas][3] = txtC.Text.ToUpper();// = Alternativa C
-            resultDataSet.Tables[0].Rows[totalPerguntas][4] = txtD.Text.ToUpper();// = Alternativa D
-            resultDataSet.Tables[0].Rows[totalPerguntas][5] = txtBiblia.Text.ToUpper();// = texto dica
-            resultDataSet.Tables[0].Rows[totalPerguntas][6] = GetResposta();// = resposta*/
+                _Consulta = "INSERT INTO [Questoes$] ";
+                _Consulta += "([ID],[PERGUNTA],[A], [B], [C], [D], [TEXTO], [RESPOSTA] ) ";
+                _Consulta += "VALUES ";
+                _Consulta += "(@ID, @PERGUNTA, @A, @B, @C, @D, @TEXTO, @RESPOSTA)";
 
-            SaveExcel(resultDataSet);
+                _oleCmd.CommandText = _Consulta;
+                _oleCmd.Parameters.Add("@ID", OleDbType.Integer).Value = getProximaPergunta();
+                _oleCmd.Parameters.Add("@PERGUNTA", OleDbType.VarChar, 255).Value = txtPergunta.Text;
+                _oleCmd.Parameters.Add("@A", OleDbType.VarChar, 255).Value = txtA.Text;
+                _oleCmd.Parameters.Add("@B", OleDbType.VarChar, 255).Value = txtB.Text;
+                _oleCmd.Parameters.Add("@C", OleDbType.VarChar, 255).Value = txtC.Text;
+                _oleCmd.Parameters.Add("@D", OleDbType.VarChar, 255).Value = txtD.Text;
+                _oleCmd.Parameters.Add("@TEXTO", OleDbType.VarChar, 255).Value = txtBiblia.Text;
+                _oleCmd.Parameters.Add("@RESPOSTA", OleDbType.VarChar, 255).Value = GetResposta();
+                _oleCmd.ExecuteNonQuery();
+
+                _oleCmd.Parameters.Clear();
+
+                txtPergunta.ResetText();
+                txtA.ResetText();
+                txtB.ResetText();
+                txtC.ResetText();
+                txtD.ResetText();
+                txtBiblia.ResetText();
+
+                MessageBox.Show("Dados Incluídos...");
+
+                if (_oleCmd != null)
+                {
+                    _oleCmd.Parameters.Clear();
+                    _oleCmd.Dispose();
+                }
+                _oleCmd = null;
+
+                if (_olecon != null)
+                {
+                    if (_olecon.State == ConnectionState.Open)
+                        _olecon.Close();
+                    _olecon.Dispose();
+                }
+                _olecon = null;
+
+                //------------------
+
+                if (_oleCmd2 != null)
+                {
+                    _oleCmd2.Parameters.Clear();
+                    _oleCmd2.Dispose();
+                }
+                _oleCmd2 = null;
+
+                if (_olecon2 != null)
+                {
+                    if (_olecon2.State == ConnectionState.Open)
+                        _olecon2.Close();
+                    _olecon2.Dispose();
+                }
+                _olecon2 = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            /*try
+            {
+                _oleCmd.CommandText = "SELECT PERGUNTA, A FROM[Questoes$] Where id = 1";
+                OleDbDataReader reader = _oleCmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtPergunta.Text = reader.GetString(0);
+                    txtA.Text = reader.GetString(1);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
         }
 
         public string GetResposta()
@@ -58,58 +136,21 @@ namespace PlayerUI
             return null;
         }
 
-        public void SaveExcel(DataSet dataSet)
+        public int getProximaPergunta()
         {
-            SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(@"C:\File\Quiz2.xlsx", SpreadsheetDocumentType.Workbook);
+            _olecon2 = new OleDbConnection(_StringConexao);
+            _olecon2.Open();
 
-            WorkbookPart workbookPart = spreadsheetDocument.AddWorkbookPart();
-            workbookPart.Workbook = new Workbook();
-            Sheets sheets = workbookPart.Workbook.AppendChild(new Sheets());
+            _oleCmd2 = new OleDbCommand();
+            _oleCmd2.Connection = _olecon2;
+            _oleCmd2.CommandType = CommandType.Text;
 
-            foreach (DataTable table in dataSet.Tables)
-            {
-                UInt32Value sheetCount = 0;
-                sheetCount++;
-
-                WorksheetPart worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
-
-                var sheetData = new SheetData();
-                worksheetPart.Worksheet = new Worksheet(sheetData);
-
-                Sheet sheet = new Sheet() { Id = workbookPart.GetIdOfPart(worksheetPart), SheetId = sheetCount, Name = table.TableName };
-                sheets.AppendChild(sheet);
-
-                Row headerRow = new Row();
-
-                List<string> columns = new List<string>();
-                foreach (DataColumn column in table.Columns)
-                {
-                    columns.Add(column.ColumnName);
-
-                    Cell cell = new Cell();
-                    cell.DataType = CellValues.String;
-                    cell.CellValue = new CellValue(column.ColumnName);
-                    headerRow.AppendChild(cell);
-                }
-
-                sheetData.AppendChild(headerRow);
-
-                foreach (DataRow dsrow in table.Rows)
-                {
-                    Row newRow = new Row();
-                    foreach (String col in columns)
-                    {
-                        Cell cell = new Cell();
-                        cell.DataType = CellValues.String;
-                        cell.CellValue = new CellValue(dsrow[col].ToString());
-                        newRow.AppendChild(cell);
-                    }
-
-                    sheetData.AppendChild(newRow);
-                }
-
-            }
-            workbookPart.Workbook.Save();
+            _oleCmd2.CommandText = "SELECT COUNT(*) FROM [Questoes$]";
+            int count = Convert.ToInt32(_oleCmd2.ExecuteScalar().ToString());
+            _oleCmd2.Parameters.Clear();
+            _olecon2.Close();
+            return count + 1;
         }
+
     }
 }

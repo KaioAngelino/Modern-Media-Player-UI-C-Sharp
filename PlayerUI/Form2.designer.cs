@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelPergunta = new System.Windows.Forms.Label();
+            this.txtPergunta = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnMenosDuas = new System.Windows.Forms.Button();
@@ -36,6 +36,8 @@
             this.btnResposta = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBoxAlternativas = new System.Windows.Forms.GroupBox();
+            this.groupBoxVejaBiblia = new System.Windows.Forms.GroupBox();
+            this.txtVejaNaBiblia = new System.Windows.Forms.Label();
             this.labelRespostaERRADA = new System.Windows.Forms.Label();
             this.labelRespostaCERTA = new System.Windows.Forms.Label();
             this.radioAlternativaD = new System.Windows.Forms.RadioButton();
@@ -43,25 +45,23 @@
             this.radioAlternativaB = new System.Windows.Forms.RadioButton();
             this.radioAlternativaA = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBoxVejaBiblia = new System.Windows.Forms.GroupBox();
-            this.txtVejaNaBiblia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxAlternativas.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBoxVejaBiblia.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelPergunta
+            // txtPergunta
             // 
-            this.labelPergunta.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelPergunta.AutoSize = true;
-            this.labelPergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPergunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.labelPergunta.Location = new System.Drawing.Point(331, 9);
-            this.labelPergunta.Name = "labelPergunta";
-            this.labelPergunta.Size = new System.Drawing.Size(173, 25);
-            this.labelPergunta.TabIndex = 0;
-            this.labelPergunta.Text = "FORMULARIO X1";
+            this.txtPergunta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPergunta.AutoSize = true;
+            this.txtPergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPergunta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.txtPergunta.Location = new System.Drawing.Point(331, 9);
+            this.txtPergunta.Name = "txtPergunta";
+            this.txtPergunta.Size = new System.Drawing.Size(173, 25);
+            this.txtPergunta.TabIndex = 0;
+            this.txtPergunta.Text = "FORMULARIO X1";
             // 
             // dataGridView1
             // 
@@ -171,6 +171,28 @@
             this.groupBoxAlternativas.TabStop = false;
             this.groupBoxAlternativas.Text = "ALTERNATIVAS";
             // 
+            // groupBoxVejaBiblia
+            // 
+            this.groupBoxVejaBiblia.Controls.Add(this.txtVejaNaBiblia);
+            this.groupBoxVejaBiblia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.groupBoxVejaBiblia.Location = new System.Drawing.Point(6, 285);
+            this.groupBoxVejaBiblia.Name = "groupBoxVejaBiblia";
+            this.groupBoxVejaBiblia.Size = new System.Drawing.Size(405, 100);
+            this.groupBoxVejaBiblia.TabIndex = 6;
+            this.groupBoxVejaBiblia.TabStop = false;
+            this.groupBoxVejaBiblia.Text = "Veja Na Bíblia";
+            this.groupBoxVejaBiblia.Visible = false;
+            // 
+            // txtVejaNaBiblia
+            // 
+            this.txtVejaNaBiblia.AutoSize = true;
+            this.txtVejaNaBiblia.ForeColor = System.Drawing.Color.White;
+            this.txtVejaNaBiblia.Location = new System.Drawing.Point(7, 33);
+            this.txtVejaNaBiblia.Name = "txtVejaNaBiblia";
+            this.txtVejaNaBiblia.Size = new System.Drawing.Size(41, 13);
+            this.txtVejaNaBiblia.TabIndex = 0;
+            this.txtVejaNaBiblia.Text = "label1";
+            // 
             // labelRespostaERRADA
             // 
             this.labelRespostaERRADA.AutoSize = true;
@@ -254,28 +276,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AJUDAS";
             // 
-            // groupBoxVejaBiblia
-            // 
-            this.groupBoxVejaBiblia.Controls.Add(this.txtVejaNaBiblia);
-            this.groupBoxVejaBiblia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.groupBoxVejaBiblia.Location = new System.Drawing.Point(6, 285);
-            this.groupBoxVejaBiblia.Name = "groupBoxVejaBiblia";
-            this.groupBoxVejaBiblia.Size = new System.Drawing.Size(405, 100);
-            this.groupBoxVejaBiblia.TabIndex = 6;
-            this.groupBoxVejaBiblia.TabStop = false;
-            this.groupBoxVejaBiblia.Text = "Veja Na Bíblia";
-            this.groupBoxVejaBiblia.Visible = false;
-            // 
-            // txtVejaNaBiblia
-            // 
-            this.txtVejaNaBiblia.AutoSize = true;
-            this.txtVejaNaBiblia.ForeColor = System.Drawing.Color.White;
-            this.txtVejaNaBiblia.Location = new System.Drawing.Point(7, 33);
-            this.txtVejaNaBiblia.Name = "txtVejaNaBiblia";
-            this.txtVejaNaBiblia.Size = new System.Drawing.Size(41, 13);
-            this.txtVejaNaBiblia.TabIndex = 0;
-            this.txtVejaNaBiblia.Text = "label1";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,16 +286,16 @@
             this.Controls.Add(this.groupBoxAlternativas);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelPergunta);
+            this.Controls.Add(this.txtPergunta);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxAlternativas.ResumeLayout(false);
             this.groupBoxAlternativas.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.groupBoxVejaBiblia.ResumeLayout(false);
             this.groupBoxVejaBiblia.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +303,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelPergunta;
+        private System.Windows.Forms.Label txtPergunta;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnMenosDuas;

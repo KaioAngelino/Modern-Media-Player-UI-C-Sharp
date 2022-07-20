@@ -8,12 +8,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Convert = System.Convert;
 
 namespace PlayerUI
 {
@@ -32,11 +34,7 @@ namespace PlayerUI
         int totalAcertos = 0;
         int perguntaAtual = 1;
 
-        private OleDbConnection _olecon;
-        private OleDbCommand _oleCmd;
-        private static String _Arquivo = @"C:\File\Quiz.xlsx";
-        private String _StringConexao = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 12.0 Xml;HDR=YES;ReadOnly=False';", _Arquivo);
-        private String _Consulta;
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
         public Form2()
         {
             InitializeComponent();
@@ -44,35 +42,18 @@ namespace PlayerUI
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            lerQuestoes("1");
+            lerQuestoes("", true);
         }
-        private void lerQuestoes(string questao)
+        private void lerQuestoes(string questao, bool novoJogo)
         {
             limparTela();
             eliminaDuas(true);
             exibirQuestoes();
 
+            buscarQuestao(questao, novoJogo);
 
 
-            try
-            {
-                _olecon = new OleDbConnection(_StringConexao);
-                _olecon.Open();
-
-                _oleCmd = new OleDbCommand();
-                _oleCmd.Connection = _olecon;
-                _oleCmd.CommandType = CommandType.Text;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-            buscarQuestao(questao);
-
-
-            labelPergunta.Text = pergunta;
+            txtPergunta.Text = pergunta;
             radioAlternativaA.Text = alternativaA;
             radioAlternativaB.Text = alternativaB;
             radioAlternativaC.Text = alternativaC;
@@ -116,9 +97,12 @@ namespace PlayerUI
                     btnMenosDuas.Enabled = true;
                     btnResposta.Enabled = true;
                     btnVerNaBilbia.Enabled = true;
-                    lerQuestoes(perguntaAtual.ToString());
+                    lerQuestoes(perguntaAtual.ToString(), false);
                 }
+                groupBoxVejaBiblia.Visible = false;
+                txtVejaNaBiblia.Text = null;
             }
+           
 
         }
 
@@ -137,6 +121,7 @@ namespace PlayerUI
 
         private void btnResposta_Click(object sender, EventArgs e)
         {
+            btnMenosDuas.Enabled = false;
             btnResposta.Enabled = false;
             verResposta();
         }
@@ -164,30 +149,63 @@ namespace PlayerUI
             }
         }
 
-        private void buscarQuestao(string questao)
+        private void buscarQuestao(string questao, bool novoJogo)
         {
+
+            DataTable dt = new DataTable();
+            String sql = "SELECT * FROM Questao";
+
             try
             {
-                _oleCmd.CommandText = "SELECT * FROM [Questoes$] Where ID = " + questao;
-                OleDbDataReader reader = _oleCmd.ExecuteReader();
+                SQLiteDataAdapter da = new SQLiteDataAdapter(sql, sql_con);
+                da.Fill(dt);
 
-                while (reader.Read())
+                DataRow row;
+                if (novoJogo)
                 {
-                    pergunta = reader.GetValue(1).ToString();
-                    alternativaA = reader.GetValue(2).ToString();
-                    alternativaB = reader.GetValue(3).ToString();
-                    alternativaC = reader.GetValue(4).ToString();
-                    alternativaD = reader.GetValue(5).ToString();
-                    textoBiblia = reader.GetValue(6).ToString();
-                    resposta = reader.GetValue(7).ToString();
+                    row = dt.DefaultView.Table.Select().FirstOrDefault<DataRow>();
+                }
+                else
+                {
+                    row = (DataRow)dt.DefaultView.ToTable().Select().GetValue(Convert.ToInt32(questao)-1);
                 }
 
-                reader.Close();
+                
+
+
+                pergunta = row[1].ToString();
+                alternativaA = row[2].ToString();
+                alternativaB = row[3].ToString();
+                alternativaC = row[4].ToString();
+                alternativaD = row[5].ToString();
+                textoBiblia = row[6].ToString();
+                resposta = row[7].ToString();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Equals("O índice estava fora dos limites da matriz."))
+                {
+                    this.Close();
+                    this.Dispose();
+                    Form3 form3 = new Form3(dt.DefaultView.Count, totalAcertos);
+
+                    form3.Show();
+                }
+                else
+                {
+                    throw new Exception(ex.Message);
+                }
+
             }
+            finally
+            {
+                if (sql_con.State == ConnectionState.Open)
+                {
+                    sql_con.Close();
+                }
+            }
+
         }
 
         private void eliminaDuas(bool visibilidade)
@@ -213,6 +231,7 @@ namespace PlayerUI
 
         private void btnVerNaBilbia_Click(object sender, EventArgs e)
         {
+            btnVerNaBilbia.Enabled = false;
             groupBoxVejaBiblia.Visible = true;
             txtVejaNaBiblia.Text = "Veja o(s) seguinte(s) texto(s): " + textoBiblia;
         }

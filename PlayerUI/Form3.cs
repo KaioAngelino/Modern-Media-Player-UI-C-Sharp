@@ -34,13 +34,19 @@ namespace PlayerUI
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            this.ControlBox = false;
             popularTela();
         }
 
         private void popularTela()
         {
-            quantidadePerguntas.Text = (this.totalPerguntas-1).ToString();
+            quantidadePerguntas.Text = (this.totalPerguntas).ToString();
             labelTotalAcertos.Text = this.totalAcertos.ToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

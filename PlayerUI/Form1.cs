@@ -22,7 +22,7 @@ namespace PlayerUI
         private void hideSubMenu()
         {
             panelMediaSubMenu.Visible = false;
-            panelPlaylistSubMenu.Visible = false;
+            //panelPlaylistSubMenu.Visible = false;
             panelToolsSubMenu.Visible = false;
         }
 
@@ -79,7 +79,7 @@ namespace PlayerUI
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelPlaylistSubMenu);
+           // showSubMenu(panelPlaylistSubMenu);
         }
 
         #region PlayListManagemetSubMenu
@@ -129,9 +129,7 @@ namespace PlayerUI
 
         private void button12_Click(object sender, EventArgs e)
         {
-            //..
-            //your codes
-            //..
+            openChildForm(new Form5());
             hideSubMenu();
         }
 
