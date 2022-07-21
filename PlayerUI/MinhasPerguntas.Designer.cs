@@ -1,6 +1,6 @@
 ﻿namespace PlayerUI
 {
-    partial class Form5
+    partial class MinhasPerguntas
     {
         /// <summary>
         /// Required designer variable.

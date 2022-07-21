@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form5 : Form
+    public partial class MinhasPerguntas : Form
     {
         private SQLiteConnection _sqliteCon;
         private SQLiteCommand _sqliteCmd;
@@ -21,7 +21,7 @@ namespace PlayerUI
         private String _Consulta;
         private List<string> idsExistentes;
         private List<string> idsSalvar;
-        public Form5()
+        public MinhasPerguntas()
         {
             InitializeComponent();
         }
