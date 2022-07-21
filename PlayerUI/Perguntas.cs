@@ -33,10 +33,26 @@ namespace PlayerUI
         int totalPerguntas = 0;
         int totalAcertos = 0;
         int perguntaAtual = 1;
+        int minutosCronometro = 0;
+        TelaInicial telaInicial = null;
 
         SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
         public Perguntas()
         {
+            InitializeComponent();
+        }
+
+        public Perguntas(TelaInicial telaInicial, int perguntas)
+        {
+            this.telaInicial = telaInicial;
+            totalPerguntas = perguntas;
+            InitializeComponent();
+        }
+        public Perguntas(TelaInicial telaInicial, int perguntas, int minutosCronometro)
+        {
+            this.telaInicial = telaInicial;
+            totalPerguntas = perguntas;
+            this.minutosCronometro = minutosCronometro;
             InitializeComponent();
         }
 
@@ -86,10 +102,10 @@ namespace PlayerUI
 
                 perguntaAtual++;
 
-                if (perguntaAtual == totalPerguntas)
+                if ((perguntaAtual - 1) == totalPerguntas)
                 {
-                    Resultado form3 = new Resultado(totalPerguntas, totalAcertos);
-                    form3.Show();
+                    this.telaInicial.openChildForm(new Resultado(totalPerguntas, totalAcertos));
+
                     this.Close();
                 }
                 else
@@ -102,7 +118,7 @@ namespace PlayerUI
                 groupBoxVejaBiblia.Visible = false;
                 txtVejaNaBiblia.Text = null;
             }
-           
+
 
         }
 
@@ -167,10 +183,10 @@ namespace PlayerUI
                 }
                 else
                 {
-                    row = (DataRow)dt.DefaultView.ToTable().Select().GetValue(Convert.ToInt32(questao)-1);
+                    row = (DataRow)dt.DefaultView.ToTable().Select().GetValue(Convert.ToInt32(questao) - 1);
                 }
 
-                
+
 
 
                 pergunta = row[1].ToString();
@@ -234,26 +250,6 @@ namespace PlayerUI
             btnVerNaBilbia.Enabled = false;
             groupBoxVejaBiblia.Visible = true;
             txtVejaNaBiblia.Text = "Veja o(s) seguinte(s) texto(s): " + textoBiblia;
-        }
-
-        private void radioAlternativaA_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioAlternativaB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioAlternativaC_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioAlternativaD_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

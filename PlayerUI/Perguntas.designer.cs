@@ -239,7 +239,6 @@
             this.radioAlternativaD.TabStop = true;
             this.radioAlternativaD.Text = "radioButton4";
             this.radioAlternativaD.UseVisualStyleBackColor = true;
-            this.radioAlternativaD.CheckedChanged += new System.EventHandler(this.radioAlternativaD_CheckedChanged);
             // 
             // radioAlternativaC
             // 
@@ -252,7 +251,6 @@
             this.radioAlternativaC.TabStop = true;
             this.radioAlternativaC.Text = "radioButton3";
             this.radioAlternativaC.UseVisualStyleBackColor = true;
-            this.radioAlternativaC.CheckedChanged += new System.EventHandler(this.radioAlternativaC_CheckedChanged);
             // 
             // radioAlternativaB
             // 
@@ -265,7 +263,6 @@
             this.radioAlternativaB.TabStop = true;
             this.radioAlternativaB.Text = "radioButton2";
             this.radioAlternativaB.UseVisualStyleBackColor = true;
-            this.radioAlternativaB.CheckedChanged += new System.EventHandler(this.radioAlternativaB_CheckedChanged);
             // 
             // radioAlternativaA
             // 
@@ -278,7 +275,6 @@
             this.radioAlternativaA.TabStop = true;
             this.radioAlternativaA.Text = "radioButton1";
             this.radioAlternativaA.UseVisualStyleBackColor = true;
-            this.radioAlternativaA.CheckedChanged += new System.EventHandler(this.radioAlternativaA_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -299,7 +295,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AJUDAS";
             // 
-            // Form2
+            // Perguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,7 +308,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtPergunta);
-            this.Name = "Form2";
+            this.Name = "Perguntas";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

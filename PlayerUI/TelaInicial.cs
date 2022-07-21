@@ -79,7 +79,7 @@ namespace PlayerUI
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
-           // showSubMenu(panelPlaylistSubMenu);
+            // showSubMenu(panelPlaylistSubMenu);
         }
 
         #region PlayListManagemetSubMenu
@@ -172,7 +172,7 @@ namespace PlayerUI
         }
 
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
             activeForm = childForm;
@@ -187,7 +187,8 @@ namespace PlayerUI
 
         private void btn_Iniciar(object sender, EventArgs e)
         {
-            openChildForm(new Perguntas());
+            openChildForm(new PopUpPerguntas(this));
+
             //..
             //your codes
             //..

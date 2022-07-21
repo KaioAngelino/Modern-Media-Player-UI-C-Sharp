@@ -54,16 +54,12 @@ C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\Ninject.xml
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.csproj.AssemblyReference.cache
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.csproj.SuggestedBindingRedirects.cache
-C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Form1.resources
-C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Form2.resources
-C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Form4.resources
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.csproj.GenerateResource.cache
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.csproj.CoreCompileInputs.cache
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.csproj.CopyComplete
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.exe
 C:\Users\kaioa\Source\Repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.pdb
-C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Form5.resources
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\x86\sqlite3.dll
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\x64\sqlite3.dll
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
@@ -132,4 +128,9 @@ C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\EntityFramework.xml
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\bin\Debug\System.Data.SQLite.xml
-C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Form3.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.PopUpPerguntas.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.TelaInicial.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Perguntas.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.Resultado.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.NovaPergunta.resources
+C:\Users\kaioa\source\repos\KaioAngelino\Modern-Media-Player-UI-C-Sharp\PlayerUI\obj\Debug\PlayerUI.MinhasPerguntas.resources
