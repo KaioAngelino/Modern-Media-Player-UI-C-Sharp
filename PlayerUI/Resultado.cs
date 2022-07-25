@@ -40,8 +40,8 @@ namespace PlayerUI
 
         private void popularTela()
         {
-            quantidadePerguntas.Text = (this.totalPerguntas).ToString();
-            labelTotalAcertos.Text = this.totalAcertos.ToString();
+            quantidadePerguntas.Text = (this.totalPerguntas).ToString() + " Perguntas";
+            labelTotalAcertos.Text = this.totalAcertos.ToString() + " Acertos";
         }
 
         private void button9_Click(object sender, EventArgs e)

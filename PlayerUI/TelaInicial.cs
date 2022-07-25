@@ -1,18 +1,12 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PlayerUI
 {
     public partial class TelaInicial : Form
     {
+        Color themeColor = Color.FromArgb(32, 30, 45);
         public TelaInicial()
         {
             InitializeComponent();
@@ -187,7 +181,8 @@ namespace PlayerUI
 
         private void btn_Iniciar(object sender, EventArgs e)
         {
-            openChildForm(new PopUpPerguntas(this));
+            themeColor = panelChildForm.BackColor;
+            openChildForm(new PopUpPerguntas(this, themeColor));
 
             //..
             //your codes
@@ -195,9 +190,20 @@ namespace PlayerUI
             hideSubMenu();
         }
 
-        private void btnParticipantes_Click(object sender, EventArgs e)
+
+        private void btnLightTheme_Click(object sender, EventArgs e)
         {
-            int numeroParticipantes = Convert.ToInt32(Interaction.InputBox("Quantos Participantes?", "Número de Participantes", "1"));
+            btnLightTheme.Enabled = !btnLightTheme.Enabled;
+            btnDarkTheme.Enabled = true;
+            panelChildForm.BackColor = Color.FromArgb(224, 224, 224);     
+
+        }
+
+        private void btnDarkTheme_Click(object sender, EventArgs e)
+        {
+            btnDarkTheme.Enabled |= btnDarkTheme.Enabled;
+            btnLightTheme.Enabled = true;
+            panelChildForm.BackColor = Color.FromArgb(32, 30, 45);
         }
     }
 }

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PlayerUI
@@ -14,11 +11,7 @@ namespace PlayerUI
     public partial class PopUpPerguntas : Form
     {
         int totalPerguntas = 0;
-        private SQLiteConnection _sqliteCon;
-        private SQLiteCommand _sqliteCmd;
-        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
-        private String _Consulta;
-        private List<RadioButton> listaRadioButtons = new List<RadioButton>();
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true); private List<RadioButton> listaRadioButtons = new List<RadioButton>();
         private TelaInicial telaInicial;
 
         public PopUpPerguntas()
@@ -26,10 +19,17 @@ namespace PlayerUI
             InitializeComponent();
         }
 
-        public PopUpPerguntas(TelaInicial telaInicial)
+        public PopUpPerguntas(TelaInicial telaInicial, Color themeColor)
         {
             this.telaInicial = telaInicial;
+
             InitializeComponent();
+            this.BackColor = themeColor;
+            groupBox1.BackColor = themeColor;
+            groupBoxCarreira.BackColor = themeColor;
+            groupBoxModoJogo.BackColor = themeColor;
+            groupBoxPartidaRapida.BackColor = themeColor;
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -142,6 +142,14 @@ namespace PlayerUI
                 }
 
                 telaInicial.openChildForm(formPerguntas);
+            }
+            else
+            {
+                if (numericPerguntasCorrida.Value > 0 && totalMinutos.Value > 0)
+                {
+                    formPerguntas = new Perguntas(telaInicial, Convert.ToInt32(numericPerguntasCorrida.Value), Convert.ToInt32(totalMinutos.Value));
+                    telaInicial.openChildForm(formPerguntas);
+                }
             }
 
 

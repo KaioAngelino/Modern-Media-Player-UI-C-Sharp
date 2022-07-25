@@ -52,7 +52,6 @@ namespace PlayerUI
                 }
                 //ajusta a largura das colunas aos dados
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
                 DataRow row = dt.NewRow();
                 row["ALTERNATIVA_A"] = null;

@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.quantidadePerguntas = new System.Windows.Forms.Label();
             this.labelTotalAcertos = new System.Windows.Forms.Label();
+            this.quantidadePerguntas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -78,29 +78,29 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // quantidadePerguntas
-            // 
-            this.quantidadePerguntas.AutoSize = true;
-            this.quantidadePerguntas.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantidadePerguntas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(90)))), ((int)(((byte)(204)))));
-            this.quantidadePerguntas.Location = new System.Drawing.Point(416, 143);
-            this.quantidadePerguntas.Name = "quantidadePerguntas";
-            this.quantidadePerguntas.Size = new System.Drawing.Size(210, 73);
-            this.quantidadePerguntas.TabIndex = 21;
-            this.quantidadePerguntas.Text = "label2";
-            // 
             // labelTotalAcertos
             // 
             this.labelTotalAcertos.AutoSize = true;
             this.labelTotalAcertos.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalAcertos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(90)))), ((int)(((byte)(204)))));
-            this.labelTotalAcertos.Location = new System.Drawing.Point(145, 143);
+            this.labelTotalAcertos.Location = new System.Drawing.Point(136, 61);
             this.labelTotalAcertos.Name = "labelTotalAcertos";
-            this.labelTotalAcertos.Size = new System.Drawing.Size(265, 73);
+            this.labelTotalAcertos.Size = new System.Drawing.Size(51, 73);
             this.labelTotalAcertos.TabIndex = 22;
-            this.labelTotalAcertos.Text = "label2  /";
+            this.labelTotalAcertos.Text = "/";
             // 
-            // Form3
+            // quantidadePerguntas
+            // 
+            this.quantidadePerguntas.AutoSize = true;
+            this.quantidadePerguntas.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantidadePerguntas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(90)))), ((int)(((byte)(204)))));
+            this.quantidadePerguntas.Location = new System.Drawing.Point(136, 171);
+            this.quantidadePerguntas.Name = "quantidadePerguntas";
+            this.quantidadePerguntas.Size = new System.Drawing.Size(51, 73);
+            this.quantidadePerguntas.TabIndex = 21;
+            this.quantidadePerguntas.Text = "/";
+            // 
+            // Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,7 +111,7 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
+            this.Name = "Resultado";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
@@ -123,7 +123,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label quantidadePerguntas;
         private System.Windows.Forms.Label labelTotalAcertos;
+        private System.Windows.Forms.Label quantidadePerguntas;
     }
 }

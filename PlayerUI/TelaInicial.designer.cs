@@ -41,8 +41,9 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnParticipantes = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
+            this.btnLightTheme = new System.Windows.Forms.Button();
+            this.btnDarkTheme = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelMediaSubMenu.SuspendLayout();
@@ -216,8 +217,9 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelChildForm.Controls.Add(this.btnDarkTheme);
+            this.panelChildForm.Controls.Add(this.btnLightTheme);
             this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Controls.Add(this.btnParticipantes);
             this.panelChildForm.Controls.Add(this.btnIniciar);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
@@ -235,23 +237,6 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // btnParticipantes
-            // 
-            this.btnParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnParticipantes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnParticipantes.FlatAppearance.BorderSize = 0;
-            this.btnParticipantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParticipantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParticipantes.ForeColor = System.Drawing.Color.LightGray;
-            this.btnParticipantes.Location = new System.Drawing.Point(378, 387);
-            this.btnParticipantes.Name = "btnParticipantes";
-            this.btnParticipantes.Size = new System.Drawing.Size(150, 40);
-            this.btnParticipantes.TabIndex = 18;
-            this.btnParticipantes.Text = "PARTICIPANTES";
-            this.btnParticipantes.UseVisualStyleBackColor = false;
-            this.btnParticipantes.Visible = false;
-            this.btnParticipantes.Click += new System.EventHandler(this.btnParticipantes_Click);
-            // 
             // btnIniciar
             // 
             this.btnIniciar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -268,7 +253,28 @@
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btn_Iniciar);
             // 
-            // Form1
+            // btnLightTheme
+            // 
+            this.btnLightTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnLightTheme.Image")));
+            this.btnLightTheme.Location = new System.Drawing.Point(553, 523);
+            this.btnLightTheme.Name = "btnLightTheme";
+            this.btnLightTheme.Size = new System.Drawing.Size(36, 30);
+            this.btnLightTheme.TabIndex = 20;
+            this.btnLightTheme.UseVisualStyleBackColor = true;
+            this.btnLightTheme.Click += new System.EventHandler(this.btnLightTheme_Click);
+            // 
+            // btnDarkTheme
+            // 
+            this.btnDarkTheme.Enabled = false;
+            this.btnDarkTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnDarkTheme.Image")));
+            this.btnDarkTheme.Location = new System.Drawing.Point(595, 523);
+            this.btnDarkTheme.Name = "btnDarkTheme";
+            this.btnDarkTheme.Size = new System.Drawing.Size(36, 30);
+            this.btnDarkTheme.TabIndex = 21;
+            this.btnDarkTheme.UseVisualStyleBackColor = true;
+            this.btnDarkTheme.Click += new System.EventHandler(this.btnDarkTheme_Click);
+            // 
+            // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -280,7 +286,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Form1";
+            this.Name = "TelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSideMenu.ResumeLayout(false);
@@ -305,9 +311,10 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button btnParticipantes;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLightTheme;
+        private System.Windows.Forms.Button btnDarkTheme;
     }
 }
 
