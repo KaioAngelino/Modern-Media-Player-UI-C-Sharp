@@ -17,7 +17,10 @@ namespace PlayerUI
     {
         private SQLiteConnection _sqliteCon;
         private SQLiteCommand _sqliteCmd;
-        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
+
+
+
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
         private String _Consulta;
         private List<string> idsExistentes;
         private List<string> idsSalvar;

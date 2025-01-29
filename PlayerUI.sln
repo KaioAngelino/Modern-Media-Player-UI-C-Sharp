@@ -1,22 +1,124 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerUI", "PlayerUI\PlayerUI.csproj", "{B265B459-B4B6-44BC-BDB1-B401C58DC48F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizJW", "PlayerUI\QuizJW.csproj", "{B265B459-B4B6-44BC-BDB1-B401C58DC48F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{EDD4C803-F874-4B45-8EC6-C3187619A276}"
+	ProjectSection(SolutionItems) = preProject
+		PlayerUI\bin\x64\Release\database = PlayerUI\bin\x64\Release\database
+		PlayerUI\bin\x64\Release\DocumentFormat.OpenXml.dll = PlayerUI\bin\x64\Release\DocumentFormat.OpenXml.dll
+		PlayerUI\bin\x64\Release\DocumentFormat.OpenXml.xml = PlayerUI\bin\x64\Release\DocumentFormat.OpenXml.xml
+		PlayerUI\bin\x64\Release\EntityFramework.dll = PlayerUI\bin\x64\Release\EntityFramework.dll
+		PlayerUI\bin\x64\Release\EntityFramework.SqlServer.dll = PlayerUI\bin\x64\Release\EntityFramework.SqlServer.dll
+		PlayerUI\bin\x64\Release\EntityFramework.SqlServer.xml = PlayerUI\bin\x64\Release\EntityFramework.SqlServer.xml
+		PlayerUI\bin\x64\Release\EntityFramework.xml = PlayerUI\bin\x64\Release\EntityFramework.xml
+		PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.dll = PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.dll
+		PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.pdb = PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.pdb
+		PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.xml = PlayerUI\bin\x64\Release\ExcelDataReader.DataSet.xml
+		PlayerUI\bin\x64\Release\ExcelDataReader.dll = PlayerUI\bin\x64\Release\ExcelDataReader.dll
+		PlayerUI\bin\x64\Release\ExcelDataReader.pdb = PlayerUI\bin\x64\Release\ExcelDataReader.pdb
+		PlayerUI\bin\x64\Release\ExcelDataReader.xml = PlayerUI\bin\x64\Release\ExcelDataReader.xml
+		PlayerUI\bin\x64\Release\Microsoft.Azure.Amqp.dll = PlayerUI\bin\x64\Release\Microsoft.Azure.Amqp.dll
+		PlayerUI\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll = PlayerUI\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+		PlayerUI\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml = PlayerUI\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+		PlayerUI\bin\x64\Release\Microsoft.Bcl.HashCode.dll = PlayerUI\bin\x64\Release\Microsoft.Bcl.HashCode.dll
+		PlayerUI\bin\x64\Release\Microsoft.Bcl.HashCode.xml = PlayerUI\bin\x64\Release\Microsoft.Bcl.HashCode.xml
+		PlayerUI\bin\x64\Release\Microsoft.Data.Sqlite.dll = PlayerUI\bin\x64\Release\Microsoft.Data.Sqlite.dll
+		PlayerUI\bin\x64\Release\Microsoft.Data.Sqlite.xml = PlayerUI\bin\x64\Release\Microsoft.Data.Sqlite.xml
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Abstractions.dll = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Abstractions.dll
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Abstractions.xml = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Abstractions.xml
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Design.dll = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Design.dll
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Design.xml = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Design.xml
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.dll = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.dll
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Relational.dll = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Relational.dll
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Relational.xml = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.Relational.xml
+		PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.xml = PlayerUI\bin\x64\Release\Microsoft.EntityFrameworkCore.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Abstractions.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Abstractions.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Abstractions.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Abstractions.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Memory.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Memory.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Memory.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Caching.Memory.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Abstractions.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Abstractions.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Binder.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Binder.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Binder.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.Binder.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Configuration.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.DependencyInjection.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.Abstractions.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.Abstractions.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.Abstractions.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.Abstractions.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Logging.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Options.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Options.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Options.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Options.xml
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Primitives.dll = PlayerUI\bin\x64\Release\Microsoft.Extensions.Primitives.dll
+		PlayerUI\bin\x64\Release\Microsoft.Extensions.Primitives.xml = PlayerUI\bin\x64\Release\Microsoft.Extensions.Primitives.xml
+		PlayerUI\bin\x64\Release\Ninject.dll = PlayerUI\bin\x64\Release\Ninject.dll
+		PlayerUI\bin\x64\Release\Ninject.xml = PlayerUI\bin\x64\Release\Ninject.xml
+		PlayerUI\bin\x64\Release\PlayerUI.application = PlayerUI\bin\x64\Release\PlayerUI.application
+		PlayerUI\bin\x64\Release\PlayerUI.exe = PlayerUI\bin\x64\Release\PlayerUI.exe
+		PlayerUI\bin\x64\Release\PlayerUI.exe.config = PlayerUI\bin\x64\Release\PlayerUI.exe.config
+		PlayerUI\bin\x64\Release\PlayerUI.exe.manifest = PlayerUI\bin\x64\Release\PlayerUI.exe.manifest
+		PlayerUI\bin\x64\Release\PlayerUI.pdb = PlayerUI\bin\x64\Release\PlayerUI.pdb
+		PlayerUI\bin\Release\x64\SQLite.Interop.dll = PlayerUI\bin\Release\x64\SQLite.Interop.dll
+		PlayerUI\bin\x64\Release\sqlite3.dll = PlayerUI\bin\x64\Release\sqlite3.dll
+		PlayerUI\bin\Release\x64\sqlite3.dll = PlayerUI\bin\Release\x64\sqlite3.dll
+		PlayerUI\bin\x64\Release\SQLitePCLRaw.batteries_v2.dll = PlayerUI\bin\x64\Release\SQLitePCLRaw.batteries_v2.dll
+		PlayerUI\bin\x64\Release\SQLitePCLRaw.core.dll = PlayerUI\bin\x64\Release\SQLitePCLRaw.core.dll
+		PlayerUI\bin\x64\Release\SQLitePCLRaw.nativelibrary.dll = PlayerUI\bin\x64\Release\SQLitePCLRaw.nativelibrary.dll
+		PlayerUI\bin\x64\Release\SQLitePCLRaw.provider.dynamic_cdecl.dll = PlayerUI\bin\x64\Release\SQLitePCLRaw.provider.dynamic_cdecl.dll
+		PlayerUI\bin\x64\Release\System.Buffers.dll = PlayerUI\bin\x64\Release\System.Buffers.dll
+		PlayerUI\bin\x64\Release\System.Buffers.xml = PlayerUI\bin\x64\Release\System.Buffers.xml
+		PlayerUI\bin\x64\Release\System.Collections.Immutable.dll = PlayerUI\bin\x64\Release\System.Collections.Immutable.dll
+		PlayerUI\bin\x64\Release\System.Collections.Immutable.xml = PlayerUI\bin\x64\Release\System.Collections.Immutable.xml
+		PlayerUI\bin\x64\Release\System.ComponentModel.Annotations.dll = PlayerUI\bin\x64\Release\System.ComponentModel.Annotations.dll
+		PlayerUI\bin\x64\Release\System.Data.SQLite.dll = PlayerUI\bin\x64\Release\System.Data.SQLite.dll
+		PlayerUI\bin\x64\Release\System.Data.SQLite.EF6.dll = PlayerUI\bin\x64\Release\System.Data.SQLite.EF6.dll
+		PlayerUI\bin\x64\Release\System.Data.SQLite.Linq.dll = PlayerUI\bin\x64\Release\System.Data.SQLite.Linq.dll
+		PlayerUI\bin\x64\Release\System.Data.SQLite.xml = PlayerUI\bin\x64\Release\System.Data.SQLite.xml
+		PlayerUI\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll = PlayerUI\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+		PlayerUI\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml = PlayerUI\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+		PlayerUI\bin\x64\Release\System.Memory.dll = PlayerUI\bin\x64\Release\System.Memory.dll
+		PlayerUI\bin\x64\Release\System.Memory.xml = PlayerUI\bin\x64\Release\System.Memory.xml
+		PlayerUI\bin\x64\Release\System.Numerics.Vectors.dll = PlayerUI\bin\x64\Release\System.Numerics.Vectors.dll
+		PlayerUI\bin\x64\Release\System.Numerics.Vectors.xml = PlayerUI\bin\x64\Release\System.Numerics.Vectors.xml
+		PlayerUI\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll = PlayerUI\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+		PlayerUI\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml = PlayerUI\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+		PlayerUI\bin\x64\Release\System.Threading.Tasks.Extensions.dll = PlayerUI\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+		PlayerUI\bin\x64\Release\System.Threading.Tasks.Extensions.xml = PlayerUI\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|x64.ActiveCfg = Debug|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|x64.Build.0 = Debug|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|x86.ActiveCfg = Debug|x86
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Debug|x86.Build.0 = Debug|x86
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|Any CPU.ActiveCfg = Release|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|Any CPU.Build.0 = Release|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|x64.ActiveCfg = Release|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|x64.Build.0 = Release|x64
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|x86.ActiveCfg = Release|x86
+		{B265B459-B4B6-44BC-BDB1-B401C58DC48F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E010C0C-08B5-48AF-ACFD-280EF3AFA445}
 	EndGlobalSection
 EndGlobal

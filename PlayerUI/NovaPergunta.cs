@@ -19,7 +19,7 @@ namespace PlayerUI
 {
     public partial class NovaPergunta : Form
     {
-        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
         private SQLiteConnection _sqliteCon;
         private SQLiteCommand _sqliteCmd;
         private String _Consulta;
@@ -47,9 +47,7 @@ namespace PlayerUI
                                                   .FirstOrDefault(r => r.Checked);
                 if (checkedButton != null)
                 {
-                    if (!AnyValueIsNull(txtPergunta.Text,
-                    txtA.Text, txtC.Text, txtB.Text, txtD.Text,
-                    txtBiblia.Text))
+                    if (!AnyValueIsNull(txtPergunta.Text,txtA.Text, txtC.Text, txtB.Text, txtD.Text,txtBiblia.Text))
                     {
                         _sqliteCon.Open();
 
@@ -68,26 +66,28 @@ namespace PlayerUI
                         _sqliteCmd.Parameters.Add("@TEXTO", DbType.String).Value = txtBiblia.Text.ToUpper();
                         _sqliteCmd.Parameters.Add("@RESPOSTA", DbType.String, 255).Value = GetResposta();
                         _sqliteCmd.ExecuteNonQuery();
+
+                        _sqliteCmd.Parameters.Clear();
+
+                        txtPergunta.ResetText();
+                        txtA.ResetText();
+                        txtC.ResetText();
+                        txtB.ResetText();
+                        txtD.ResetText();
+                        txtBiblia.ResetText();
+
+
+                        checkedButton.Checked = false;
+
+
+                        _sqliteCmd.Parameters.Clear();
+                        _sqliteCon.Close();
+                        _sqliteCon.Dispose();
+
+                        MessageBox.Show("Pergunta Cadastrada.");
                     }
 
-                    _sqliteCmd.Parameters.Clear();
-
-                    txtPergunta.ResetText();
-                    txtA.ResetText();
-                    txtC.ResetText();
-                    txtB.ResetText();
-                    txtD.ResetText();
-                    txtBiblia.ResetText();
-
-
-                    checkedButton.Checked = false;
-
-
-                    _sqliteCmd.Parameters.Clear();
-                    _sqliteCon.Close();
-                    _sqliteCon.Dispose();
-
-                    MessageBox.Show("Pergunta Cadastrada.");
+                    
 
                 }
             }

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace PlayerUI
@@ -11,12 +13,47 @@ namespace PlayerUI
     public partial class PopUpPerguntas : Form
     {
         int totalPerguntas = 0;
-        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true); private List<RadioButton> listaRadioButtons = new List<RadioButton>();
+       SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
+
+        private List<RadioButton> listaRadioButtons = new List<RadioButton>();
         private TelaInicial telaInicial;
+     
 
         public PopUpPerguntas()
         {
             InitializeComponent();
+            
+        }
+        private void ExtractDatabaseIfNeeded()
+        {
+            string resourceName = "PlayerUI.database.db";  // Nome do recurso embutido no projeto
+            string appDirectory = Path.GetDirectoryName(Application.ExecutablePath);
+            string dbPath = Path.Combine(appDirectory, "database.db");
+
+            // Verifica se o banco já foi extraído
+            if (!File.Exists(dbPath))
+            {
+                // O banco de dados ainda não foi extraído, então extraímos
+                using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                {
+                    if (resourceStream == null)
+                    {
+                        MessageBox.Show("O banco de dados embutido não foi encontrado no projeto.");
+                        return;
+                    }
+
+                    using (FileStream fileStream = new FileStream(dbPath, FileMode.Create, FileAccess.Write))
+                    {
+                        resourceStream.CopyTo(fileStream);
+                    }
+
+                    MessageBox.Show("Banco de dados extraído com sucesso!");
+                }
+            }
+
+            // Após a extração, podemos conectar ao banco de dados
+            string connectionString = $"Data Source={dbPath};Version=3;";
+            sql_con = new SQLiteConnection(connectionString);
         }
 
         public PopUpPerguntas(TelaInicial telaInicial, Color themeColor)
@@ -40,6 +77,8 @@ namespace PlayerUI
         private void Form3_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            // Verifica e extrai o banco de dados embutido, se necessário
+            ExtractDatabaseIfNeeded();
             BuscarTotalPerguntas();
             GerenciarRadioButtons();
 

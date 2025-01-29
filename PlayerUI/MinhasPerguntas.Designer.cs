@@ -71,7 +71,7 @@
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // Form5
+            // MinhasPerguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelMinhasPerguntas);
-            this.Name = "Form5";
+            this.Name = "MinhasPerguntas";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

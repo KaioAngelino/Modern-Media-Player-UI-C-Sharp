@@ -30,7 +30,7 @@ namespace PlayerUI
         int minutosCronometro = 0;
         TelaInicial telaInicial = null;
 
-        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "database.db;Version=3", true);
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
         string pathSoundLastSeconds = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "sound.wav";
         Stopwatch cronometro = new Stopwatch();
 

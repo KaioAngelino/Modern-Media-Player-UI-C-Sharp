@@ -36,22 +36,22 @@
             this.radioBtnDezPerguntas = new System.Windows.Forms.RadioButton();
             this.groupBoxModoJogo = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioBtnTempo = new System.Windows.Forms.RadioButton();
+            this.numericPerguntasCorrida = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.totalMinutos = new System.Windows.Forms.NumericUpDown();
             this.groupBoxCarreira = new System.Windows.Forms.GroupBox();
             this.textBoxPersonalizado = new System.Windows.Forms.NumericUpDown();
             this.radioBtnPersonalizado = new System.Windows.Forms.RadioButton();
             this.radioBtnTodas = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericPerguntasCorrida = new System.Windows.Forms.NumericUpDown();
-            this.radioBtnTempo = new System.Windows.Forms.RadioButton();
             this.groupBoxPartidaRapida.SuspendLayout();
             this.groupBoxModoJogo.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPerguntasCorrida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalMinutos)).BeginInit();
             this.groupBoxCarreira.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPersonalizado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPerguntasCorrida)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -163,6 +163,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Corrida";
             // 
+            // radioBtnTempo
+            // 
+            this.radioBtnTempo.AutoSize = true;
+            this.radioBtnTempo.Location = new System.Drawing.Point(25, 95);
+            this.radioBtnTempo.Name = "radioBtnTempo";
+            this.radioBtnTempo.Size = new System.Drawing.Size(81, 24);
+            this.radioBtnTempo.TabIndex = 7;
+            this.radioBtnTempo.TabStop = true;
+            this.radioBtnTempo.Text = "Tempo";
+            this.radioBtnTempo.UseVisualStyleBackColor = true;
+            this.radioBtnTempo.Visible = false;
+            // 
+            // numericPerguntasCorrida
+            // 
+            this.numericPerguntasCorrida.Location = new System.Drawing.Point(119, 45);
+            this.numericPerguntasCorrida.Name = "numericPerguntasCorrida";
+            this.numericPerguntasCorrida.Size = new System.Drawing.Size(120, 26);
+            this.numericPerguntasCorrida.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Perguntas: ";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -223,34 +251,6 @@
             this.radioBtnTodas.Text = "Todas";
             this.radioBtnTodas.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Perguntas: ";
-            // 
-            // numericPerguntasCorrida
-            // 
-            this.numericPerguntasCorrida.Location = new System.Drawing.Point(119, 45);
-            this.numericPerguntasCorrida.Name = "numericPerguntasCorrida";
-            this.numericPerguntasCorrida.Size = new System.Drawing.Size(120, 26);
-            this.numericPerguntasCorrida.TabIndex = 6;
-            // 
-            // radioBtnTempo
-            // 
-            this.radioBtnTempo.AutoSize = true;
-            this.radioBtnTempo.Location = new System.Drawing.Point(25, 95);
-            this.radioBtnTempo.Name = "radioBtnTempo";
-            this.radioBtnTempo.Size = new System.Drawing.Size(81, 24);
-            this.radioBtnTempo.TabIndex = 7;
-            this.radioBtnTempo.TabStop = true;
-            this.radioBtnTempo.Text = "Tempo";
-            this.radioBtnTempo.UseVisualStyleBackColor = true;
-            this.radioBtnTempo.Visible = false;
-            // 
             // PopUpPerguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,11 +268,11 @@
             this.groupBoxModoJogo.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPerguntasCorrida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalMinutos)).EndInit();
             this.groupBoxCarreira.ResumeLayout(false);
             this.groupBoxCarreira.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPersonalizado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPerguntasCorrida)).EndInit();
             this.ResumeLayout(false);
 
         }
