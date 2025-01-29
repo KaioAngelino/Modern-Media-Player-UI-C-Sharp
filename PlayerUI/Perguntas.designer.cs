@@ -46,6 +46,7 @@
             this.radioAlternativaB = new System.Windows.Forms.RadioButton();
             this.radioAlternativaA = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Avancar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tmrCronometro = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,7 +88,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnConfirmar.Location = new System.Drawing.Point(23, 237);
+            this.btnConfirmar.Location = new System.Drawing.Point(23, 253);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(122, 40);
             this.btnConfirmar.TabIndex = 3;
@@ -104,7 +105,7 @@
             this.btnMenosDuas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosDuas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosDuas.ForeColor = System.Drawing.Color.LightGray;
-            this.btnMenosDuas.Location = new System.Drawing.Point(23, 46);
+            this.btnMenosDuas.Location = new System.Drawing.Point(23, 58);
             this.btnMenosDuas.Name = "btnMenosDuas";
             this.btnMenosDuas.Size = new System.Drawing.Size(122, 40);
             this.btnMenosDuas.TabIndex = 4;
@@ -121,7 +122,7 @@
             this.btnVerNaBilbia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerNaBilbia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerNaBilbia.ForeColor = System.Drawing.Color.LightGray;
-            this.btnVerNaBilbia.Location = new System.Drawing.Point(23, 101);
+            this.btnVerNaBilbia.Location = new System.Drawing.Point(23, 114);
             this.btnVerNaBilbia.Name = "btnVerNaBilbia";
             this.btnVerNaBilbia.Size = new System.Drawing.Size(122, 40);
             this.btnVerNaBilbia.TabIndex = 5;
@@ -138,7 +139,7 @@
             this.btnResposta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResposta.ForeColor = System.Drawing.Color.LightGray;
-            this.btnResposta.Location = new System.Drawing.Point(23, 160);
+            this.btnResposta.Location = new System.Drawing.Point(23, 177);
             this.btnResposta.Name = "btnResposta";
             this.btnResposta.Size = new System.Drawing.Size(122, 40);
             this.btnResposta.TabIndex = 6;
@@ -173,9 +174,9 @@
             this.groupBoxAlternativas.Controls.Add(this.radioAlternativaA);
             this.groupBoxAlternativas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAlternativas.ForeColor = System.Drawing.Color.White;
-            this.groupBoxAlternativas.Location = new System.Drawing.Point(29, 67);
+            this.groupBoxAlternativas.Location = new System.Drawing.Point(12, 49);
             this.groupBoxAlternativas.Name = "groupBoxAlternativas";
-            this.groupBoxAlternativas.Size = new System.Drawing.Size(379, 344);
+            this.groupBoxAlternativas.Size = new System.Drawing.Size(396, 362);
             this.groupBoxAlternativas.TabIndex = 8;
             this.groupBoxAlternativas.TabStop = false;
             this.groupBoxAlternativas.Text = "ALTERNATIVAS";
@@ -186,7 +187,7 @@
             this.groupBoxVejaBiblia.Controls.Add(this.txtVejaNaBiblia);
             this.groupBoxVejaBiblia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxVejaBiblia.ForeColor = System.Drawing.Color.White;
-            this.groupBoxVejaBiblia.Location = new System.Drawing.Point(6, 250);
+            this.groupBoxVejaBiblia.Location = new System.Drawing.Point(6, 259);
             this.groupBoxVejaBiblia.Name = "groupBoxVejaBiblia";
             this.groupBoxVejaBiblia.Size = new System.Drawing.Size(285, 78);
             this.groupBoxVejaBiblia.TabIndex = 6;
@@ -235,7 +236,7 @@
             // 
             this.radioAlternativaD.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioAlternativaD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAlternativaD.Location = new System.Drawing.Point(12, 180);
+            this.radioAlternativaD.Location = new System.Drawing.Point(12, 189);
             this.radioAlternativaD.Name = "radioAlternativaD";
             this.radioAlternativaD.Size = new System.Drawing.Size(338, 24);
             this.radioAlternativaD.TabIndex = 3;
@@ -247,7 +248,7 @@
             // 
             this.radioAlternativaC.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioAlternativaC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAlternativaC.Location = new System.Drawing.Point(12, 140);
+            this.radioAlternativaC.Location = new System.Drawing.Point(12, 149);
             this.radioAlternativaC.Name = "radioAlternativaC";
             this.radioAlternativaC.Size = new System.Drawing.Size(338, 24);
             this.radioAlternativaC.TabIndex = 2;
@@ -259,7 +260,7 @@
             // 
             this.radioAlternativaB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioAlternativaB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAlternativaB.Location = new System.Drawing.Point(12, 100);
+            this.radioAlternativaB.Location = new System.Drawing.Point(12, 109);
             this.radioAlternativaB.Name = "radioAlternativaB";
             this.radioAlternativaB.Size = new System.Drawing.Size(338, 24);
             this.radioAlternativaB.TabIndex = 1;
@@ -271,7 +272,7 @@
             // 
             this.radioAlternativaA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.radioAlternativaA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioAlternativaA.Location = new System.Drawing.Point(12, 60);
+            this.radioAlternativaA.Location = new System.Drawing.Point(12, 69);
             this.radioAlternativaA.Name = "radioAlternativaA";
             this.radioAlternativaA.Size = new System.Drawing.Size(338, 24);
             this.radioAlternativaA.TabIndex = 0;
@@ -283,6 +284,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.Avancar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnMenosDuas);
             this.groupBox1.Controls.Add(this.btnVerNaBilbia);
@@ -290,22 +292,39 @@
             this.groupBox1.Controls.Add(this.btnConfirmar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(419, 67);
+            this.groupBox1.Location = new System.Drawing.Point(419, 49);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(15);
             this.groupBox1.MinimumSize = new System.Drawing.Size(145, 344);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(169, 344);
+            this.groupBox1.Size = new System.Drawing.Size(169, 362);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AJUDAS";
             // 
+            // Avancar
+            // 
+            this.Avancar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Avancar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Avancar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.Avancar.FlatAppearance.BorderSize = 0;
+            this.Avancar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Avancar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Avancar.ForeColor = System.Drawing.Color.LightGray;
+            this.Avancar.Location = new System.Drawing.Point(23, 309);
+            this.Avancar.Name = "Avancar";
+            this.Avancar.Size = new System.Drawing.Size(122, 40);
+            this.Avancar.TabIndex = 9;
+            this.Avancar.Text = "Avançar";
+            this.Avancar.UseVisualStyleBackColor = false;
+            this.Avancar.Click += new System.EventHandler(this.Avancar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 303);
+            this.label1.Location = new System.Drawing.Point(49, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 8;
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
@@ -362,6 +381,7 @@
         private System.Windows.Forms.GroupBox groupBoxVejaBiblia;
         private System.Windows.Forms.TextBox txtVejaNaBiblia;
         private System.Windows.Forms.Timer tmrCronometro;
+        private System.Windows.Forms.Button Avancar;
         private System.Windows.Forms.Label label1;
     }
 }

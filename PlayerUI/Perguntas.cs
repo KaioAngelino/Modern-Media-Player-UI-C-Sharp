@@ -30,6 +30,9 @@ namespace PlayerUI
         int minutosCronometro = 0;
         TelaInicial telaInicial = null;
 
+        Boolean confirmarResposta = false;
+        Boolean isNovoJogo = true;
+
         SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
         string pathSoundLastSeconds = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "sound.wav";
         Stopwatch cronometro = new Stopwatch();
@@ -43,12 +46,24 @@ namespace PlayerUI
 
         public Perguntas()
         {
+
             InitializeComponent();
+
+            if (tmrCronometro != null)
+            {
+                this.minutosCronometro = 0;
+                tmrCronometro.Stop();
+            }
         }
 
         public Perguntas(TelaInicial telaInicial, int perguntas)
         {
             InitializeComponent();
+            if (tmrCronometro != null)
+            {
+                this.minutosCronometro = 0;
+                tmrCronometro.Stop();
+            }
             this.telaInicial = telaInicial;
             totalPerguntas = perguntas;
 
@@ -91,7 +106,7 @@ namespace PlayerUI
             SQLiteDataAdapter da = new SQLiteDataAdapter(sql, sql_con);
             da.Fill(dt);
 
-            lerQuestoes(true);
+            lerQuestoes(isNovoJogo);
 
         }
 
@@ -137,12 +152,13 @@ namespace PlayerUI
                     questoes = dt.DefaultView.Table.Rows.Cast<DataRow>().OrderBy(rand => random.Next()).Take(totalPerguntas);
                 }
 
-
+                limparTela();
                 listaQuestoes = questoes.ToList();
+
             }
 
-            limparTela();
-            eliminaDuas(true);
+
+            exibirEliminaDuas(true);
             exibirQuestoes();
 
             buscarQuestao();
@@ -153,25 +169,27 @@ namespace PlayerUI
             radioAlternativaB.Text = alternativaB;
             radioAlternativaC.Text = alternativaC;
             radioAlternativaD.Text = alternativaD;
+
+            AjustarTextoPergunta(); // Chamar a função para ajustar o texto corretamente
+
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            atualizarTela();
-        }
 
-        private void atualizarTela()
-        {
             var checkedButton = groupBoxAlternativas.Controls.OfType<RadioButton>()
                                                   .FirstOrDefault(r => r.Checked);
+
             if (checkedButton != null)
             {
+                confirmarResposta = true;
+                btnConfirmar.Enabled = false;
                 if (checkedButton.Text == resposta)
                 {
                     labelRespostaERRADA.Visible = false;
                     labelRespostaCERTA.Visible = true;
 
-                    totalAcertos++;
+                    //totalAcertos++;
                 }
                 else
                 {
@@ -179,20 +197,27 @@ namespace PlayerUI
                     labelRespostaERRADA.Visible = true;
                 }
 
-                if ((perguntaAtual - 1) == totalPerguntas)
-                {
-                    EncerrarJogo();
-                }
-                else
-                {
-                    btnMenosDuas.Enabled = true;
-                    btnResposta.Enabled = true;
-                    btnVerNaBilbia.Enabled = true;
-                    lerQuestoes(false);
-                }
-                groupBoxVejaBiblia.Visible = false;
-                txtVejaNaBiblia.Text = null;
+
             }
+
+        }
+
+        private void atualizarTela()
+        {
+
+            if ((perguntaAtual - 1) == totalPerguntas)
+            {
+                EncerrarJogo();
+            }
+            else
+            {
+                btnMenosDuas.Enabled = true;
+                btnResposta.Enabled = true;
+                btnVerNaBilbia.Enabled = true;
+                lerQuestoes(false);
+            }
+            groupBoxVejaBiblia.Visible = false;
+            txtVejaNaBiblia.Text = null;
 
 
         }
@@ -214,6 +239,7 @@ namespace PlayerUI
             {
                 checkedButton.Checked = false;
             }
+            textoBiblia = "";
         }
 
         private void btnResposta_Click(object sender, EventArgs e)
@@ -221,6 +247,7 @@ namespace PlayerUI
             btnMenosDuas.Enabled = false;
             btnResposta.Enabled = false;
             verResposta();
+
         }
 
         private void verResposta()
@@ -236,7 +263,8 @@ namespace PlayerUI
                 var respostaCerta = groupBoxAlternativas.Controls.OfType<RadioButton>()
                                                       .FirstOrDefault(r => r.Text == resposta);
                 respostaCerta.Checked = true;
-                limparTela();
+                //limparTela();
+
             }
             catch (Exception ex)
             {
@@ -304,9 +332,9 @@ namespace PlayerUI
 
         }
 
-        private void eliminaDuas(bool visibilidade)
+        private void exibirEliminaDuas(bool visibilidade)
         {
-            limparTela();
+          //  limparTela();
 
             var respostasErradas = groupBoxAlternativas.Controls.OfType<RadioButton>().Where(r => r.Text != resposta);
             List<RadioButton> eliminaDuas = new List<RadioButton>();
@@ -322,7 +350,7 @@ namespace PlayerUI
         private void btnMenosDuas_Click(object sender, EventArgs e)
         {
             btnMenosDuas.Enabled = false;
-            eliminaDuas(false);
+            exibirEliminaDuas(false);
         }
 
         private void btnVerNaBilbia_Click(object sender, EventArgs e)
@@ -360,5 +388,87 @@ namespace PlayerUI
             simpleSound.Play();
         }
 
+        private void Avancar_Click(object sender, EventArgs e)
+        {
+
+            if (labelRespostaCERTA.Visible == true)
+            {
+                totalAcertos++;
+                btnConfirmar.Enabled = true;
+                confirmarResposta = false;
+                atualizarTela();
+
+            }
+            else
+            {
+                if (labelRespostaERRADA.Visible == true)
+                {
+                    btnConfirmar.Enabled = true;
+                    confirmarResposta = false;
+                    atualizarTela();
+                }
+                if (!confirmarResposta)
+                {
+                    MessageBox.Show("Responda e Confirme essa questão antes de avançar.");
+                }
+                else
+                {
+                    btnConfirmar.Enabled = true;
+                    confirmarResposta = false;
+                    atualizarTela();
+                }
+
+            }
+        }
+        private void AjustarTextoPergunta()
+        {
+            int limiteCaracteres = 45; // Definir o limite baseado na referência
+
+            // 1. Quebrar o texto corretamente
+            string textoFormatado = QuebrarTexto(pergunta, limiteCaracteres);
+            txtPergunta.Text = textoFormatado;
+
+            // 2. Ajustar tamanho da fonte caso ultrapasse duas linhas
+            using (Graphics g = txtPergunta.CreateGraphics())
+            {
+                SizeF tamanhoTexto = g.MeasureString(txtPergunta.Text, txtPergunta.Font);
+
+                if (tamanhoTexto.Height > txtPergunta.Height) // Se ultrapassar o espaço
+                {
+                    txtPergunta.Font = new Font(txtPergunta.Font.FontFamily, txtPergunta.Font.Size - 2, FontStyle.Regular);
+                }
+            }
+        }
+
+        private string QuebrarTexto(string texto, int limite)
+        {
+            string[] palavras = texto.Split(' ');
+            StringBuilder linhaAtual = new StringBuilder();
+            StringBuilder resultado = new StringBuilder();
+            int linhas = 0;
+
+            foreach (string palavra in palavras)
+            {
+                if (linhaAtual.Length + palavra.Length + 1 > limite)
+                {
+                    resultado.AppendLine(linhaAtual.ToString().Trim());
+                    linhaAtual.Clear();
+                    linhas++;
+
+                    if (linhas >= 2) // Limita a 2 linhas
+                        break;
+                }
+
+                linhaAtual.Append(palavra + " ");
+            }
+
+            if (linhaAtual.Length > 0)
+            {
+                resultado.AppendLine(linhaAtual.ToString().Trim());
+            }
+
+            return resultado.ToString().Trim();
+        }
     }
+
 }
