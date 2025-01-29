@@ -40,10 +40,10 @@
             this.btnQuiz = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnDarkTheme = new System.Windows.Forms.Button();
+            this.btnLightTheme = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.btnLightTheme = new System.Windows.Forms.Button();
-            this.btnDarkTheme = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelMediaSubMenu.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 561);
+            this.panelSideMenu.Size = new System.Drawing.Size(200, 561);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnExit
@@ -80,7 +80,7 @@
             this.btnExit.Location = new System.Drawing.Point(0, 516);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(250, 45);
+            this.btnExit.Size = new System.Drawing.Size(200, 45);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "  Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,7 +96,7 @@
             this.panelToolsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 251);
             this.panelToolsSubMenu.Name = "panelToolsSubMenu";
-            this.panelToolsSubMenu.Size = new System.Drawing.Size(250, 80);
+            this.panelToolsSubMenu.Size = new System.Drawing.Size(200, 80);
             this.panelToolsSubMenu.TabIndex = 7;
             // 
             // button12
@@ -110,7 +110,7 @@
             this.button12.Location = new System.Drawing.Point(0, 40);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 40);
+            this.button12.Size = new System.Drawing.Size(200, 40);
             this.button12.TabIndex = 1;
             this.button12.Text = "Minhas Perguntas";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +128,7 @@
             this.button13.Location = new System.Drawing.Point(0, 0);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(250, 40);
+            this.button13.Size = new System.Drawing.Size(200, 40);
             this.button13.TabIndex = 0;
             this.button13.Text = "Nova Pergunta";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,7 +148,7 @@
             this.btnTools.Location = new System.Drawing.Point(0, 185);
             this.btnTools.Name = "btnTools";
             this.btnTools.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTools.Size = new System.Drawing.Size(250, 66);
+            this.btnTools.Size = new System.Drawing.Size(200, 66);
             this.btnTools.TabIndex = 6;
             this.btnTools.Text = "  Perguntas";
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,7 +163,7 @@
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 147);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
-            this.panelMediaSubMenu.Size = new System.Drawing.Size(250, 38);
+            this.panelMediaSubMenu.Size = new System.Drawing.Size(200, 38);
             this.panelMediaSubMenu.TabIndex = 2;
             // 
             // itemMenuIniciar
@@ -177,7 +177,7 @@
             this.itemMenuIniciar.Location = new System.Drawing.Point(0, 0);
             this.itemMenuIniciar.Name = "itemMenuIniciar";
             this.itemMenuIniciar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.itemMenuIniciar.Size = new System.Drawing.Size(250, 40);
+            this.itemMenuIniciar.Size = new System.Drawing.Size(200, 40);
             this.itemMenuIniciar.TabIndex = 0;
             this.itemMenuIniciar.Text = "INICIAR";
             this.itemMenuIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +198,7 @@
             this.btnQuiz.Location = new System.Drawing.Point(0, 92);
             this.btnQuiz.Name = "btnQuiz";
             this.btnQuiz.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnQuiz.Size = new System.Drawing.Size(250, 55);
+            this.btnQuiz.Size = new System.Drawing.Size(200, 55);
             this.btnQuiz.TabIndex = 1;
             this.btnQuiz.Text = "    Quiz";
             this.btnQuiz.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +211,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 92);
+            this.panelLogo.Size = new System.Drawing.Size(200, 92);
             this.panelLogo.TabIndex = 0;
             // 
             // panelChildForm
@@ -222,16 +222,37 @@
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Controls.Add(this.btnIniciar);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(200, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(684, 561);
+            this.panelChildForm.Size = new System.Drawing.Size(734, 561);
             this.panelChildForm.TabIndex = 2;
+            // 
+            // btnDarkTheme
+            // 
+            this.btnDarkTheme.Enabled = false;
+            this.btnDarkTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnDarkTheme.Image")));
+            this.btnDarkTheme.Location = new System.Drawing.Point(595, 523);
+            this.btnDarkTheme.Name = "btnDarkTheme";
+            this.btnDarkTheme.Size = new System.Drawing.Size(36, 30);
+            this.btnDarkTheme.TabIndex = 21;
+            this.btnDarkTheme.UseVisualStyleBackColor = true;
+            this.btnDarkTheme.Click += new System.EventHandler(this.btnDarkTheme_Click);
+            // 
+            // btnLightTheme
+            // 
+            this.btnLightTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnLightTheme.Image")));
+            this.btnLightTheme.Location = new System.Drawing.Point(553, 523);
+            this.btnLightTheme.Name = "btnLightTheme";
+            this.btnLightTheme.Size = new System.Drawing.Size(36, 30);
+            this.btnLightTheme.TabIndex = 20;
+            this.btnLightTheme.UseVisualStyleBackColor = true;
+            this.btnLightTheme.Click += new System.EventHandler(this.btnLightTheme_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(74, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(576, 279);
             this.pictureBox1.TabIndex = 19;
@@ -245,34 +266,13 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIniciar.Location = new System.Drawing.Point(286, 387);
+            this.btnIniciar.Location = new System.Drawing.Point(311, 387);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(150, 40);
             this.btnIniciar.TabIndex = 17;
             this.btnIniciar.Text = "INICIAR";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btn_Iniciar);
-            // 
-            // btnLightTheme
-            // 
-            this.btnLightTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnLightTheme.Image")));
-            this.btnLightTheme.Location = new System.Drawing.Point(553, 523);
-            this.btnLightTheme.Name = "btnLightTheme";
-            this.btnLightTheme.Size = new System.Drawing.Size(36, 30);
-            this.btnLightTheme.TabIndex = 20;
-            this.btnLightTheme.UseVisualStyleBackColor = true;
-            this.btnLightTheme.Click += new System.EventHandler(this.btnLightTheme_Click);
-            // 
-            // btnDarkTheme
-            // 
-            this.btnDarkTheme.Enabled = false;
-            this.btnDarkTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnDarkTheme.Image")));
-            this.btnDarkTheme.Location = new System.Drawing.Point(595, 523);
-            this.btnDarkTheme.Name = "btnDarkTheme";
-            this.btnDarkTheme.Size = new System.Drawing.Size(36, 30);
-            this.btnDarkTheme.TabIndex = 21;
-            this.btnDarkTheme.UseVisualStyleBackColor = true;
-            this.btnDarkTheme.Click += new System.EventHandler(this.btnDarkTheme_Click);
             // 
             // TelaInicial
             // 

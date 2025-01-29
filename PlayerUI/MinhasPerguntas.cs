@@ -46,6 +46,10 @@ namespace PlayerUI
                 {
                     dataGridView1.Columns[i].HeaderCell.Value = dataGridView1.Columns[i].HeaderCell.Value.ToString().Replace("ALTERNATIVA", "");
                     dataGridView1.Columns[i].HeaderCell.Value = dataGridView1.Columns[i].HeaderCell.Value.ToString().Replace("_", " ");
+
+                    dataGridView1.Columns["PERGUNTA"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dataGridView1.Columns["PERGUNTA"].FillWeight = 2; // Ocupa mais espaço em relação às outras
+
                 }
 
                 // Print the value one column of each DataRow.
