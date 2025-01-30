@@ -43,6 +43,7 @@ namespace PlayerUI
         IEnumerable<DataRow> questoes;
         List<DataRow> listaQuestoes = new List<DataRow>();
         Random random = new Random();
+        private bool cronometroAtivo;
 
         public Perguntas()
         {
@@ -76,11 +77,12 @@ namespace PlayerUI
             totalPerguntas = perguntas;
             this.minutosCronometro = minutosCronometro * 60;
 
+            cronometroAtivo = true;
 
 
             if (minutosCronometro > 0)
             {
-                label1.Visible = true;
+                timerLabel.Visible = true;
 
                 tmrCronometro = new Timer();
                 tmrCronometro.Tick += new EventHandler(count_down);
@@ -94,8 +96,15 @@ namespace PlayerUI
                 {
                     segundosTimer = "0" + segundosTimer;
                 }
-                label1.Text = minutosTimer + " : " + segundosTimer;
+                timerLabel.Text = minutosTimer + " : " + segundosTimer;
             }
+        }
+
+        public Perguntas(bool cronometroAtivo)
+        {
+            InitializeComponent();
+            if (this.cronometroAtivo)
+                this.cronometroAtivo = cronometroAtivo;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -108,35 +117,44 @@ namespace PlayerUI
 
             lerQuestoes(isNovoJogo);
 
+            if (!cronometroAtivo)
+            {
+                tmrCronometro.Stop();
+                minutosCronometro = 0;
+            }
+
         }
 
         private void count_down(object sender, EventArgs e)
         {
 
-            if (this.minutosCronometro == 0)
+            if (timerLabel.Visible)
             {
-                tmrCronometro.Stop();
-                EncerrarJogo();
+                if (this.minutosCronometro == 0)
+                {
+                    tmrCronometro.Stop();
+                    EncerrarJogo();
 
-            }
-            else if (this.minutosCronometro > 0)
-            {
-                if (this.minutosCronometro <= 60)
-                {
-                    label1.ForeColor = Color.Red;
                 }
-                if (this.minutosCronometro == 10)
+                else if (cronometroAtivo && this.minutosCronometro > 0)
                 {
-                    LastSecondsSound();
+                    if (this.minutosCronometro <= 60)
+                    {
+                        timerLabel.ForeColor = Color.Red;
+                    }
+                    if (this.minutosCronometro == 10)
+                    {
+                        LastSecondsSound();
+                    }
+                    this.minutosCronometro--;
+                    minutosTimer = (this.minutosCronometro / 60).ToString();
+                    segundosTimer = (this.minutosCronometro % 60).ToString();
+                    if (segundosTimer.Length == 1)
+                    {
+                        segundosTimer = "0" + segundosTimer;
+                    }
+                    timerLabel.Text = minutosTimer + " : " + segundosTimer;
                 }
-                this.minutosCronometro--;
-                minutosTimer = (this.minutosCronometro / 60).ToString();
-                segundosTimer = (this.minutosCronometro % 60).ToString();
-                if (segundosTimer.Length == 1)
-                {
-                    segundosTimer = "0" + segundosTimer;
-                }
-                label1.Text = minutosTimer + " : " + segundosTimer;
             }
         }
         private void lerQuestoes(bool novoJogo)
@@ -334,7 +352,7 @@ namespace PlayerUI
 
         private void exibirEliminaDuas(bool visibilidade)
         {
-          //  limparTela();
+            //  limparTela();
 
             var respostasErradas = groupBoxAlternativas.Controls.OfType<RadioButton>().Where(r => r.Text != resposta);
             List<RadioButton> eliminaDuas = new List<RadioButton>();

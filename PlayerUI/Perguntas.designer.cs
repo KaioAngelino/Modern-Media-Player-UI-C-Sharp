@@ -47,7 +47,7 @@
             this.radioAlternativaA = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Avancar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.timerLabel = new System.Windows.Forms.Label();
             this.tmrCronometro = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxAlternativas.SuspendLayout();
@@ -285,7 +285,7 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.Avancar);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.timerLabel);
             this.groupBox1.Controls.Add(this.btnMenosDuas);
             this.groupBox1.Controls.Add(this.btnVerNaBilbia);
             this.groupBox1.Controls.Add(this.btnResposta);
@@ -318,15 +318,15 @@
             this.Avancar.UseVisualStyleBackColor = false;
             this.Avancar.Click += new System.EventHandler(this.Avancar_Click);
             // 
-            // label1
+            // timerLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Location = new System.Drawing.Point(49, 29);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(70, 25);
+            this.timerLabel.TabIndex = 8;
+            this.timerLabel.Text = "label1";
+            this.timerLabel.Visible = false;
             // 
             // tmrCronometro
             // 
@@ -382,6 +382,6 @@
         private System.Windows.Forms.TextBox txtVejaNaBiblia;
         private System.Windows.Forms.Timer tmrCronometro;
         private System.Windows.Forms.Button Avancar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label timerLabel;
     }
 }

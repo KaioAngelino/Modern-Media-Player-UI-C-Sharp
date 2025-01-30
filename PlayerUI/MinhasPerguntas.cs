@@ -40,7 +40,7 @@ namespace PlayerUI
                 DataTable dt = CarregarDados();
 
 
-
+                EstilizarDataGridView(dataGridView1);
                 dataGridView1.DataSource = dt.DefaultView;
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
@@ -222,6 +222,36 @@ namespace PlayerUI
             }
             return false;
         }
+
+        private void EstilizarDataGridView(DataGridView dgv)
+        {
+            // Configuração geral
+            dgv.BackgroundColor = Color.FromArgb(30, 30, 30); // Fundo escuro
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.GridColor = Color.FromArgb(50, 50, 50); // Cor das linhas
+            dgv.RowHeadersVisible = false;
+
+            // Configuração do cabeçalho
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersHeight = 40;
+
+            // Configuração das células
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            dgv.DefaultCellStyle.ForeColor = Color.White;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(70, 70, 70);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            // Alternar cores entre linhas
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(35, 35, 35);
+        }
+
     }
 
 }

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuizJW.exe" size="21166048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QuizJW.exe" size="21167584">
       <assemblyIdentity name="QuizJW" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>55gBce9BoSe0GgXEYn5Q4J+elrSmTsFaEMECe+ntzWA=</dsig:DigestValue>
+        <dsig:DigestValue>XP/m2BZS2Ezzlj+Og4YHbP1UjhTzMKD+qc/sPQN/ndk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

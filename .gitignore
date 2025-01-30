@@ -1,0 +1,5 @@
+/PlayerUI/bin
+/PlayerUI/bin
+*.pdb
+/PlayerUI/obj/Debug
+/PlayerUI/obj

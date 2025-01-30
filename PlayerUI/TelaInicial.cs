@@ -39,8 +39,9 @@ namespace PlayerUI
         #region MediaSubMenu
         private void button2_Click(object sender, EventArgs e)
         {
+            Boolean cronometroAtivo = false;
 
-            openChildForm(new Perguntas());
+            openChildForm(new Perguntas(cronometroAtivo));
             //..
             //your codes
             //..
