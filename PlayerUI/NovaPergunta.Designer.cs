@@ -69,6 +69,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView1
             // 
@@ -311,7 +312,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pergunta:";
             // 
-            // Form4
+            // NovaPergunta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -321,7 +322,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelPergunta);
-            this.Name = "Form4";
+            this.Name = "NovaPergunta";
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

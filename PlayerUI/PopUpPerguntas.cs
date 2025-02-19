@@ -13,16 +13,16 @@ namespace PlayerUI
     public partial class PopUpPerguntas : Form
     {
         int totalPerguntas = 0;
-       SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
+        SQLiteConnection sql_con = new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\database.db;Version=3", true);
 
         private List<RadioButton> listaRadioButtons = new List<RadioButton>();
         private TelaInicial telaInicial;
-     
+
 
         public PopUpPerguntas()
         {
             InitializeComponent();
-            
+
         }
         private void ExtractDatabaseIfNeeded()
         {
@@ -129,6 +129,7 @@ namespace PlayerUI
 
 
                 totalPerguntas = dt.DefaultView.Count;
+                lblTotalPerguntasCount.Text = totalPerguntas.ToString();
 
                 ControleElementos(totalPerguntas);
 
@@ -162,19 +163,54 @@ namespace PlayerUI
                         formPerguntas = new Perguntas(telaInicial, totalPerguntas);
                         break;
                     case "radioBtnPersonalizado":
-                        formPerguntas = new Perguntas(telaInicial, Convert.ToInt32(textBoxPersonalizado.Value));
+                        if (textBoxPersonalizado.Value > totalPerguntas)
+                        {
+                            MessageBox.Show("Total de perguntas informado é maior que o número de perguntas cadastradas");
+                        }
+                        else
+                        {
+                            formPerguntas = new Perguntas(telaInicial, Convert.ToInt32(textBoxPersonalizado.Value));
+                        }
                         break;
                     case "radioBtnDezPerguntas":
-                        formPerguntas = new Perguntas(telaInicial, 10);
+                        if (10 > totalPerguntas)
+                        {
+                            MessageBox.Show("Total de perguntas informado é maior que o número de perguntas cadastradas");
+                        }
+                        else
+                        {
+                            formPerguntas = new Perguntas(telaInicial, 10);
+                        }
                         break;
                     case "radioBtnVintePerguntas":
-                        formPerguntas = new Perguntas(telaInicial, 20);
+                        if (20 > totalPerguntas)
+                        {
+                            MessageBox.Show("Total de perguntas informado é maior que o número de perguntas cadastradas");
+                        }
+                        else
+                        {
+                            formPerguntas = new Perguntas(telaInicial, 20);
+                        }
                         break;
                     case "radioBtnCinquentaPerguntas":
-                        formPerguntas = new Perguntas(telaInicial, 50);
+                        if (50 > totalPerguntas)
+                        {
+                            MessageBox.Show("Total de perguntas informado é maior que o número de perguntas cadastradas");
+                        }
+                        else
+                        {
+                            formPerguntas = new Perguntas(telaInicial, 50);
+                        }
                         break;
                     default:
-                        formPerguntas = new Perguntas(telaInicial, Convert.ToInt32(numericPerguntasCorrida.Value));
+                        if (numericPerguntasCorrida.Value > totalPerguntas)
+                        {
+                            MessageBox.Show("Total de perguntas informado é maior que o número de perguntas cadastradas");
+                        }
+                        else
+                        {
+                            formPerguntas = new Perguntas(telaInicial, Convert.ToInt32(numericPerguntasCorrida.Value));
+                        }
                         break;
 
 

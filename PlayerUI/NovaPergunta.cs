@@ -47,7 +47,7 @@ namespace PlayerUI
                                                   .FirstOrDefault(r => r.Checked);
                 if (checkedButton != null)
                 {
-                    if (!AnyValueIsNull(txtPergunta.Text,txtA.Text, txtC.Text, txtB.Text, txtD.Text,txtBiblia.Text))
+                    if (!AnyValueIsNull(txtPergunta.Text, txtA.Text, txtC.Text, txtB.Text, txtD.Text, txtBiblia.Text))
                     {
                         _sqliteCon.Open();
 
@@ -87,7 +87,7 @@ namespace PlayerUI
                         MessageBox.Show("Pergunta Cadastrada.");
                     }
 
-                    
+
 
                 }
             }
@@ -101,7 +101,7 @@ namespace PlayerUI
                 txtBiblia.ResetText();
                 var checkedButton = groupBoxEscolherResposta.Controls.OfType<RadioButton>()
                                                  .FirstOrDefault(r => r.Checked);
-                if(checkedButton != null)
+                if (checkedButton != null)
                 {
                     checkedButton.Checked = false;
                 }
@@ -119,7 +119,20 @@ namespace PlayerUI
                                                   .FirstOrDefault(r => r.Checked);
             if (checkedButton != null)
             {
-                return checkedButton.Text;
+                string itemResposta = checkedButton.Text;
+                switch (itemResposta)
+                {
+                    case "A":
+                        return txtA.Text;
+                    case "B":
+                        return txtB.Text;
+                    case "C":
+                        return txtC.Text;
+                    case "D":
+                        return txtD.Text;
+                    default: return null;
+                }
+                //                return checkedButton.Text;
             }
             return null;
         }
@@ -137,5 +150,9 @@ namespace PlayerUI
             return false;
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

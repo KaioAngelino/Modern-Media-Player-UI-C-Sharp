@@ -3,3 +3,5 @@
 *.pdb
 /PlayerUI/obj/Debug
 /PlayerUI/obj
+PlayerUI/bin
+PlayerUI/obj

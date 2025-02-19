@@ -35,7 +35,7 @@
             this.btnMenosDuas = new System.Windows.Forms.Button();
             this.btnVerNaBilbia = new System.Windows.Forms.Button();
             this.btnResposta = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.panelPerguntaClose = new System.Windows.Forms.Button();
             this.groupBoxAlternativas = new System.Windows.Forms.GroupBox();
             this.groupBoxVejaBiblia = new System.Windows.Forms.GroupBox();
             this.txtVejaNaBiblia = new System.Windows.Forms.TextBox();
@@ -147,19 +147,20 @@
             this.btnResposta.UseVisualStyleBackColor = false;
             this.btnResposta.Click += new System.EventHandler(this.btnResposta_Click);
             // 
-            // button5
+            // panelPerguntaClose
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.LightGray;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(25, 25);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
+            this.panelPerguntaClose.FlatAppearance.BorderSize = 0;
+            this.panelPerguntaClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
+            this.panelPerguntaClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.panelPerguntaClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelPerguntaClose.ForeColor = System.Drawing.Color.LightGray;
+            this.panelPerguntaClose.Location = new System.Drawing.Point(0, 0);
+            this.panelPerguntaClose.Name = "panelPerguntaClose";
+            this.panelPerguntaClose.Size = new System.Drawing.Size(25, 25);
+            this.panelPerguntaClose.TabIndex = 7;
+            this.panelPerguntaClose.Text = "X";
+            this.panelPerguntaClose.UseVisualStyleBackColor = true;
+            this.panelPerguntaClose.Click += new System.EventHandler(this.panelPerguntaClose_Click);
             // 
             // groupBoxAlternativas
             // 
@@ -343,7 +344,7 @@
             this.ClientSize = new System.Drawing.Size(701, 458);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxAlternativas);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.panelPerguntaClose);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtPergunta);
             this.Name = "Perguntas";
@@ -369,7 +370,7 @@
         private System.Windows.Forms.Button btnMenosDuas;
         private System.Windows.Forms.Button btnVerNaBilbia;
         private System.Windows.Forms.Button btnResposta;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button panelPerguntaClose;
         private System.Windows.Forms.GroupBox groupBoxAlternativas;
         private System.Windows.Forms.RadioButton radioAlternativaD;
         private System.Windows.Forms.RadioButton radioAlternativaC;

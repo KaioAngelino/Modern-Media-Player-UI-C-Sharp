@@ -38,6 +38,7 @@ namespace PlayerUI
 
                 //busca os dados na base SQLite
                 DataTable dt = CarregarDados();
+                lblTotalPerguntasCount.Text = dt.Rows.Count.ToString();
 
 
                 EstilizarDataGridView(dataGridView1);
@@ -71,7 +72,7 @@ namespace PlayerUI
                 dt.Rows.Add(row);
 
                 dataGridView1.Columns[0].Visible = false;
-
+                
 
 
             }
@@ -252,6 +253,10 @@ namespace PlayerUI
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(35, 35, 35);
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

@@ -177,6 +177,7 @@ namespace PlayerUI
 
 
             exibirEliminaDuas(true);
+            confirmarResposta = false;
             exibirQuestoes();
 
             buscarQuestao();
@@ -232,6 +233,7 @@ namespace PlayerUI
                 btnMenosDuas.Enabled = true;
                 btnResposta.Enabled = true;
                 btnVerNaBilbia.Enabled = true;
+                confirmarResposta = false;
                 lerQuestoes(false);
             }
             groupBoxVejaBiblia.Visible = false;
@@ -413,17 +415,18 @@ namespace PlayerUI
             {
                 totalAcertos++;
                 btnConfirmar.Enabled = true;
-                confirmarResposta = false;
+        
                 atualizarTela();
-
+                confirmarResposta = true;
             }
             else
             {
                 if (labelRespostaERRADA.Visible == true)
                 {
                     btnConfirmar.Enabled = true;
-                    confirmarResposta = false;
+                   
                     atualizarTela();
+                    confirmarResposta = true;
                 }
                 if (!confirmarResposta)
                 {
@@ -432,7 +435,6 @@ namespace PlayerUI
                 else
                 {
                     btnConfirmar.Enabled = true;
-                    confirmarResposta = false;
                     atualizarTela();
                 }
 
@@ -486,6 +488,11 @@ namespace PlayerUI
             }
 
             return resultado.ToString().Trim();
+        }
+
+        private void panelPerguntaClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

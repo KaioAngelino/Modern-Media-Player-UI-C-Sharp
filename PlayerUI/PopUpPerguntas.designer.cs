@@ -45,6 +45,8 @@
             this.textBoxPersonalizado = new System.Windows.Forms.NumericUpDown();
             this.radioBtnPersonalizado = new System.Windows.Forms.RadioButton();
             this.radioBtnTodas = new System.Windows.Forms.RadioButton();
+            this.lblTotalPerguntasCount = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBoxPartidaRapida.SuspendLayout();
             this.groupBoxModoJogo.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -134,6 +136,8 @@
             // 
             // groupBoxModoJogo
             // 
+            this.groupBoxModoJogo.Controls.Add(this.lblTotalPerguntasCount);
+            this.groupBoxModoJogo.Controls.Add(this.label3);
             this.groupBoxModoJogo.Controls.Add(this.groupBox1);
             this.groupBoxModoJogo.Controls.Add(this.button9);
             this.groupBoxModoJogo.Controls.Add(this.groupBoxCarreira);
@@ -251,6 +255,27 @@
             this.radioBtnTodas.Text = "Todas";
             this.radioBtnTodas.UseVisualStyleBackColor = true;
             // 
+            // lblTotalPerguntasCount
+            // 
+            this.lblTotalPerguntasCount.AutoSize = true;
+            this.lblTotalPerguntasCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPerguntasCount.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalPerguntasCount.Location = new System.Drawing.Point(281, 426);
+            this.lblTotalPerguntasCount.Name = "lblTotalPerguntasCount";
+            this.lblTotalPerguntasCount.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalPerguntasCount.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(156, 426);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Total de Perguntas:";
+            // 
             // PopUpPerguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +291,7 @@
             this.groupBoxPartidaRapida.ResumeLayout(false);
             this.groupBoxPartidaRapida.PerformLayout();
             this.groupBoxModoJogo.ResumeLayout(false);
+            this.groupBoxModoJogo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPerguntasCorrida)).EndInit();
@@ -295,5 +321,7 @@
         private System.Windows.Forms.NumericUpDown numericPerguntasCorrida;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioBtnTempo;
+        private System.Windows.Forms.Label lblTotalPerguntasCount;
+        private System.Windows.Forms.Label label3;
     }
 }

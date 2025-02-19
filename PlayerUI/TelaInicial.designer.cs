@@ -40,6 +40,7 @@
             this.btnQuiz = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDarkTheme = new System.Windows.Forms.Button();
             this.btnLightTheme = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -179,10 +180,10 @@
             this.itemMenuIniciar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.itemMenuIniciar.Size = new System.Drawing.Size(200, 40);
             this.itemMenuIniciar.TabIndex = 0;
-            this.itemMenuIniciar.Text = "INICIAR";
+            this.itemMenuIniciar.Text = "Novo Jogo";
             this.itemMenuIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemMenuIniciar.UseVisualStyleBackColor = true;
-            this.itemMenuIniciar.Click += new System.EventHandler(this.button2_Click);
+            this.itemMenuIniciar.Click += new System.EventHandler(this.novoJogoRapido_Click);
             // 
             // btnQuiz
             // 
@@ -217,6 +218,7 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelChildForm.Controls.Add(this.button1);
             this.panelChildForm.Controls.Add(this.btnDarkTheme);
             this.panelChildForm.Controls.Add(this.btnLightTheme);
             this.panelChildForm.Controls.Add(this.pictureBox1);
@@ -227,25 +229,45 @@
             this.panelChildForm.Size = new System.Drawing.Size(734, 561);
             this.panelChildForm.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(90)))), ((int)(((byte)(204)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
+            this.button1.Location = new System.Drawing.Point(249, 466);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 40);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "OPÇÕES AVANÇADAS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btn_Iniciar);
+            // 
             // btnDarkTheme
             // 
+            this.btnDarkTheme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDarkTheme.Enabled = false;
             this.btnDarkTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnDarkTheme.Image")));
-            this.btnDarkTheme.Location = new System.Drawing.Point(595, 523);
+            this.btnDarkTheme.Location = new System.Drawing.Point(695, 531);
             this.btnDarkTheme.Name = "btnDarkTheme";
             this.btnDarkTheme.Size = new System.Drawing.Size(36, 30);
             this.btnDarkTheme.TabIndex = 21;
             this.btnDarkTheme.UseVisualStyleBackColor = true;
+            this.btnDarkTheme.Visible = false;
             this.btnDarkTheme.Click += new System.EventHandler(this.btnDarkTheme_Click);
             // 
             // btnLightTheme
             // 
+            this.btnLightTheme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLightTheme.Image = ((System.Drawing.Image)(resources.GetObject("btnLightTheme.Image")));
-            this.btnLightTheme.Location = new System.Drawing.Point(553, 523);
+            this.btnLightTheme.Location = new System.Drawing.Point(653, 531);
             this.btnLightTheme.Name = "btnLightTheme";
             this.btnLightTheme.Size = new System.Drawing.Size(36, 30);
             this.btnLightTheme.TabIndex = 20;
             this.btnLightTheme.UseVisualStyleBackColor = true;
+            this.btnLightTheme.Visible = false;
             this.btnLightTheme.Click += new System.EventHandler(this.btnLightTheme_Click);
             // 
             // pictureBox1
@@ -266,13 +288,13 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIniciar.Location = new System.Drawing.Point(311, 387);
+            this.btnIniciar.Location = new System.Drawing.Point(249, 387);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(150, 40);
+            this.btnIniciar.Size = new System.Drawing.Size(259, 40);
             this.btnIniciar.TabIndex = 17;
-            this.btnIniciar.Text = "INICIAR";
+            this.btnIniciar.Text = "INICIO RÁPIDO";
             this.btnIniciar.UseVisualStyleBackColor = false;
-            this.btnIniciar.Click += new System.EventHandler(this.btn_Iniciar);
+            this.btnIniciar.Click += new System.EventHandler(this.novoJogoRapido_Click);
             // 
             // TelaInicial
             // 
@@ -315,6 +337,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLightTheme;
         private System.Windows.Forms.Button btnDarkTheme;
+        private System.Windows.Forms.Button button1;
     }
 }
 
